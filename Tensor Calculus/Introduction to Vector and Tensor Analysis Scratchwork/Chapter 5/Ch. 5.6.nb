@@ -1,0 +1,278 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8141,        268]
+NotebookOptionsPosition[      6990,        231]
+NotebookOutlinePosition[      7344,        247]
+CellTagsIndexPosition[      7301,        244]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Chapter 5.6 - The Parallelism of Levi-Civita", "Title",
+ CellChangeTimes->{{3.710091366643238*^9, 
+  3.71009137550638*^9}},ExpressionUUID->"99a7feea-86b6-4f66-b6a2-\
+f532aa9c747b"],
+
+Cell[CellGroupData[{
+
+Cell["1.", "Chapter",
+ CellChangeTimes->{{3.710091384563827*^9, 
+  3.7100913847242823`*^9}},ExpressionUUID->"458eeb6a-61ec-45b8-ace8-\
+8e3f440bc739"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"sol", "=", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"A1", "[", "\[CurlyPhi]", "]"}], ",", 
+     RowBox[{"A2", "[", "\[CurlyPhi]", "]"}]}], "}"}], " ", "/.", " ", 
+   RowBox[{"First", "@", 
+    RowBox[{"FullSimplify", "[", 
+     RowBox[{"DSolve", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"A1", "'"}], "[", "\[CurlyPhi]", "]"}], "-", 
+           RowBox[{
+            RowBox[{"Cos", "[", "\[Alpha]", "]"}], 
+            RowBox[{"Sin", "[", "\[Alpha]", "]"}], 
+            RowBox[{"A2", "[", "\[CurlyPhi]", "]"}]}]}], "==", "0"}], ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"A2", "'"}], "[", "\[CurlyPhi]", "]"}], "+", 
+           RowBox[{
+            RowBox[{"Cot", "[", "\[Alpha]", "]"}], 
+            RowBox[{"A1", "[", "\[CurlyPhi]", "]"}]}]}], "==", "0"}], ",", 
+         RowBox[{
+          RowBox[{"A1", "[", "0", "]"}], "==", "1"}], ",", 
+         RowBox[{
+          RowBox[{"A2", "[", "0", "]"}], "==", "0"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"A1", ",", "A2"}], "}"}], ",", "\[CurlyPhi]"}], "]"}], 
+     "]"}]}]}]}]], "Code",
+ CellChangeTimes->{
+  3.710091396544037*^9},ExpressionUUID->"eada5e9d-d5eb-476b-9ea5-\
+a65b5462d613"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"\[CurlyPhi]", " ", 
+        SqrtBox[
+         RowBox[{
+          RowBox[{"-", "1"}], "-", 
+          RowBox[{"Cos", "[", 
+           RowBox[{"2", " ", "\[Alpha]"}], "]"}]}]]}], 
+       SqrtBox["2"]]}]], " ", 
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{
+        SqrtBox["2"], " ", "\[CurlyPhi]", " ", 
+        SqrtBox[
+         RowBox[{
+          RowBox[{"-", "1"}], "-", 
+          RowBox[{"Cos", "[", 
+           RowBox[{"2", " ", "\[Alpha]"}], "]"}]}]]}]]}], ")"}]}], ",", 
+   RowBox[{"-", 
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"-", 
+        FractionBox[
+         RowBox[{"\[CurlyPhi]", " ", 
+          SqrtBox[
+           RowBox[{
+            RowBox[{"-", "1"}], "-", 
+            RowBox[{"Cos", "[", 
+             RowBox[{"2", " ", "\[Alpha]"}], "]"}]}]]}], 
+         SqrtBox["2"]]}]], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", 
+        SuperscriptBox["\[ExponentialE]", 
+         RowBox[{
+          SqrtBox["2"], " ", "\[CurlyPhi]", " ", 
+          SqrtBox[
+           RowBox[{
+            RowBox[{"-", "1"}], "-", 
+            RowBox[{"Cos", "[", 
+             RowBox[{"2", " ", "\[Alpha]"}], "]"}]}]]}]]}], ")"}], " ", 
+      RowBox[{"Cot", "[", "\[Alpha]", "]"}]}], 
+     RowBox[{
+      SqrtBox["2"], " ", 
+      SqrtBox[
+       RowBox[{
+        RowBox[{"-", "1"}], "-", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"2", " ", "\[Alpha]"}], "]"}]}]]}]]}]}], "}"}]], "Output",
+ CellChangeTimes->{3.710091426457196*^9, 
+  3.7100914749153337`*^9},ExpressionUUID->"9c39b585-92ae-4c21-a82b-\
+500d86438505"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"sol", " ", "/.", " ", 
+   RowBox[{"\[CurlyPhi]", "->", 
+    RowBox[{"2", "\[Pi]"}]}]}], ";"}], "\n", 
+ RowBox[{"Simplify", "[", "%", "]"}], "\n", 
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{"%", "==", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "0"}], "}"}]}], ",", "\[Alpha]"}], "]"}]}], "Code",
+ CellChangeTimes->{{3.7100914224885597`*^9, 3.710091437484274*^9}, {
+  3.710091469910747*^9, 
+  3.710091483422278*^9}},ExpressionUUID->"a1b7a3fa-9d5c-4587-b8fc-\
+224df4133fc5"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{
+        RowBox[{"-", "2"}], " ", "\[Pi]", " ", 
+        SqrtBox[
+         RowBox[{"-", 
+          SuperscriptBox[
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}]]}]], "+", 
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"2", " ", "\[Pi]", " ", 
+        SqrtBox[
+         RowBox[{"-", 
+          SuperscriptBox[
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}]]}]]}], ")"}]}], ",", 
+   
+   RowBox[{"-", 
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{
+        RowBox[{"-", "2"}], " ", "\[Pi]", " ", 
+        SqrtBox[
+         RowBox[{"-", 
+          SuperscriptBox[
+           RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}]]}]], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", 
+        SuperscriptBox["\[ExponentialE]", 
+         RowBox[{"4", " ", "\[Pi]", " ", 
+          SqrtBox[
+           RowBox[{"-", 
+            SuperscriptBox[
+             RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}]]}]]}], ")"}], " ", 
+      
+      RowBox[{"Cot", "[", "\[Alpha]", "]"}]}], 
+     RowBox[{"2", " ", 
+      SqrtBox[
+       RowBox[{"-", 
+        SuperscriptBox[
+         RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"]}]]}]]}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.7100914266321507`*^9, 3.7100914344782457`*^9}, {
+  3.710091476432377*^9, 
+  3.710091483982411*^9}},ExpressionUUID->"cfb9f746-783d-4ed9-b73b-\
+249c96b5aa3d"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Solve","ifun",
+   "\"Inverse functions are being used by \
+\\!\\(\\*RowBox[{\\\"Solve\\\"}]\\), so some solutions may not be found; use \
+Reduce for complete solution information.\"",2,103,5,24450956921539796128,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.710091426899929*^9, 3.710091434608254*^9}, {
+  3.71009147712955*^9, 
+  3.710091484113077*^9}},ExpressionUUID->"c2d4faae-2650-49be-95f1-\
+1f490ed82836"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{{3.7100914266321507`*^9, 3.7100914344782457`*^9}, {
+  3.710091476432377*^9, 
+  3.710091484130456*^9}},ExpressionUUID->"d4554418-72a4-4f22-a282-\
+b0663ce71400"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1280, 755},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.1 for Mac OS X x86 (32-bit, 64-bit Kernel) (April 27, \
+2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 186, 3, 92, "Title", "ExpressionUUID" -> \
+"99a7feea-86b6-4f66-b6a2-f532aa9c747b"],
+Cell[CellGroupData[{
+Cell[791, 29, 149, 3, 65, "Chapter", "ExpressionUUID" -> \
+"458eeb6a-61ec-45b8-ace8-8e3f440bc739"],
+Cell[CellGroupData[{
+Cell[965, 36, 1323, 37, 52, "Code", "ExpressionUUID" -> \
+"eada5e9d-d5eb-476b-9ea5-a65b5462d613"],
+Cell[2291, 75, 1826, 59, 79, "Output", "ExpressionUUID" -> \
+"9c39b585-92ae-4c21-a82b-500d86438505"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4154, 139, 510, 14, 91, "Code", "ExpressionUUID" -> \
+"a1b7a3fa-9d5c-4587-b8fc-224df4133fc5"],
+Cell[4667, 155, 1581, 51, 77, "Output", "ExpressionUUID" -> \
+"cfb9f746-783d-4ed9-b73b-249c96b5aa3d"],
+Cell[6251, 208, 472, 11, 24, "Message", "ExpressionUUID" -> \
+"c2d4faae-2650-49be-95f1-1f490ed82836"],
+Cell[6726, 221, 224, 5, 32, "Output", "ExpressionUUID" -> \
+"d4554418-72a4-4f22-a282-b0663ce71400"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

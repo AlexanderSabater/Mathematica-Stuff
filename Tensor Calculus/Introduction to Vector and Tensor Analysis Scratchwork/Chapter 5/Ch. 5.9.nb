@@ -1,0 +1,3775 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    135926,       3765]
+NotebookOptionsPosition[    132089,       3668]
+NotebookOutlinePosition[    132443,       3684]
+CellTagsIndexPosition[    132400,       3681]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Chapter 5.9 - An Introduction to the General Theory of Relativity\
+\>", "Title",
+ CellChangeTimes->{{3.710531261517268*^9, 
+  3.710531280729294*^9}},ExpressionUUID->"b8f4a52f-3f72-4ec0-9578-\
+f22e2bddbde4"],
+
+Cell[CellGroupData[{
+
+Cell["2.", "Chapter",
+ CellChangeTimes->{{3.7105312951859703`*^9, 
+  3.710531298760313*^9}},ExpressionUUID->"cd321ee4-c847-4f02-8fd7-\
+006ca98f7074"],
+
+Cell["Transformation equations for spherically symmetric metric", "Text",
+ CellChangeTimes->{{3.710531767905862*^9, 
+  3.7105318053675327`*^9}},ExpressionUUID->"f80810fc-e3eb-435b-8952-\
+db323166422a"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Y", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"r", ",", "\[Theta]", ",", "\[Phi]", ",", "t"}], "}"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"X", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"r", " ", 
+      RowBox[{"Cos", "[", "\[Phi]", "]"}], 
+      RowBox[{"Sin", "[", "\[Theta]", "]"}]}], ",", 
+     RowBox[{"r", " ", 
+      RowBox[{"Sin", "[", "\[Phi]", "]"}], 
+      RowBox[{"Sin", "[", "\[Theta]", "]"}]}], ",", 
+     RowBox[{"r", " ", 
+      RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ",", "t"}], "}"}]}], 
+  ";"}]}], "Code",
+ CellChangeTimes->{{3.710531399966338*^9, 3.710531472729843*^9}, {
+  3.710531537313457*^9, 
+  3.710531539535582*^9}},ExpressionUUID->"f9b9e4e3-9f82-41dc-9da6-\
+5052af9533b5"],
+
+Cell["Karl Schwarzchild metric", "Text",
+ CellChangeTimes->{{3.710531809073126*^9, 
+  3.710531816391966*^9}},ExpressionUUID->"39fd9998-0cd7-4186-b4fd-\
+8381f2e345c9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"g", " ", "=", " ", 
+   RowBox[{"DiagonalMatrix", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{"\[Xi]", "[", "r", "]"}]}], ",", 
+      RowBox[{"-", 
+       RowBox[{"r", "^", "2"}]}], ",", 
+      RowBox[{
+       RowBox[{"-", 
+        RowBox[{"r", "^", "2"}]}], 
+       RowBox[{
+        RowBox[{"Sin", "[", "\[Theta]", "]"}], "^", "2"}]}], ",", 
+      RowBox[{"\[Eta]", "[", "r", "]"}]}], "}"}], "]"}]}], ";"}], "\n", 
+ RowBox[{"MatrixForm", "[", "g", "]"}]}], "Code",
+ CellChangeTimes->{{3.710531304073386*^9, 
+  3.7105313577981653`*^9}},ExpressionUUID->"aad98592-d971-4283-951b-\
+60cf8fd9097b"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {
+      RowBox[{"-", 
+       RowBox[{"\[Xi]", "[", "r", "]"}]}], "0", "0", "0"},
+     {"0", 
+      RowBox[{"-", 
+       SuperscriptBox["r", "2"]}], "0", "0"},
+     {"0", "0", 
+      RowBox[{
+       RowBox[{"-", 
+        SuperscriptBox["r", "2"]}], " ", 
+       SuperscriptBox[
+        RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"]}], "0"},
+     {"0", "0", "0", 
+      RowBox[{"\[Eta]", "[", "r", "]"}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.710531359602512*^9, 3.710531359931168*^9}, 
+   3.710531542614497*^9},ExpressionUUID->"b13fed34-014d-429c-bcdb-\
+ca6b0715adeb"]
+}, Open  ]],
+
+Cell["Associated metric tensor", "Text",
+ CellChangeTimes->{{3.7105318183209867`*^9, 
+  3.7105318225594997`*^9}},ExpressionUUID->"67aeefa5-4b27-4dee-9f77-\
+c2454bea461e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"G", " ", "=", " ", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{"Inverse", "[", "g", "]"}], "]"}]}], ";"}], "\n", 
+ RowBox[{"MatrixForm", "[", "G", "]"}]}], "Code",
+ CellChangeTimes->{
+  3.710531489147505*^9},ExpressionUUID->"be9f8071-5740-49fd-b850-\
+e70405313759"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {
+      RowBox[{"-", 
+       FractionBox["1", 
+        RowBox[{"\[Xi]", "[", "r", "]"}]]}], "0", "0", "0"},
+     {"0", 
+      RowBox[{"-", 
+       FractionBox["1", 
+        SuperscriptBox["r", "2"]]}], "0", "0"},
+     {"0", "0", 
+      RowBox[{"-", 
+       FractionBox[
+        SuperscriptBox[
+         RowBox[{"Csc", "[", "\[Theta]", "]"}], "2"], 
+        SuperscriptBox["r", "2"]]}], "0"},
+     {"0", "0", "0", 
+      FractionBox["1", 
+       RowBox[{"\[Eta]", "[", "r", "]"}]]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.710531490635209*^9, 
+  3.710531545004094*^9},ExpressionUUID->"3faba322-b224-4df6-9cde-\
+fe5fb5edbb26"]
+}, Open  ]],
+
+Cell["Christoffel symbols of the 2nd kind", "Text",
+ CellChangeTimes->{{3.710531825916387*^9, 
+  3.7105318323121967`*^9}},ExpressionUUID->"f3d77061-6374-48a6-a72a-\
+71c405426cdf"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"\[CapitalGamma]", " ", "=", " ", 
+  RowBox[{"Array", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"1", "/", "2"}], ")"}], 
+      RowBox[{"Sum", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"G", "[", 
+          RowBox[{"[", 
+           RowBox[{"#3", ",", "q"}], "]"}], "]"}], 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"D", "[", 
+            RowBox[{
+             RowBox[{"g", "[", 
+              RowBox[{"[", 
+               RowBox[{"#2", ",", "q"}], "]"}], "]"}], ",", 
+             RowBox[{"Y", "[", 
+              RowBox[{"[", "#1", "]"}], "]"}]}], "]"}], "+", 
+           RowBox[{"D", "[", 
+            RowBox[{
+             RowBox[{"g", "[", 
+              RowBox[{"[", 
+               RowBox[{"q", ",", "#1"}], "]"}], "]"}], ",", 
+             RowBox[{"Y", "[", 
+              RowBox[{"[", "#2", "]"}], "]"}]}], "]"}], "-", 
+           RowBox[{"D", "[", 
+            RowBox[{
+             RowBox[{"g", "[", 
+              RowBox[{"[", 
+               RowBox[{"#1", ",", "#2"}], "]"}], "]"}], ",", 
+             RowBox[{"Y", "[", 
+              RowBox[{"[", "q", "]"}], "]"}]}], "]"}]}], ")"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"q", ",", "4"}], "}"}]}], "]"}]}], "&"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"4", ",", "4", ",", "4"}], "}"}]}], "]"}]}], "\n", 
+ RowBox[{"MatrixForm", "[", "%", "]"}]}], "Code",
+ CellChangeTimes->{{3.7105315035472307`*^9, 
+  3.710531518656324*^9}},ExpressionUUID->"c22581fb-3d15-4831-b0bf-\
+3394f9465a7f"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["\[Xi]", "\[Prime]",
+          MultilineFunction->None], "[", "r", "]"}], 
+        RowBox[{"2", " ", 
+         RowBox[{"\[Xi]", "[", "r", "]"}]}]], ",", "0", ",", "0", ",", "0"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       FractionBox["1", "r"], ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", 
+       FractionBox["1", "r"], ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "0", ",", 
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["\[Eta]", "\[Prime]",
+          MultilineFunction->None], "[", "r", "]"}], 
+        RowBox[{"2", " ", 
+         RowBox[{"\[Eta]", "[", "r", "]"}]}]]}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       FractionBox["1", "r"], ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", 
+        FractionBox["r", 
+         RowBox[{"\[Xi]", "[", "r", "]"}]]}], ",", "0", ",", "0", ",", "0"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", 
+       RowBox[{"Cot", "[", "\[Theta]", "]"}], ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", 
+       FractionBox["1", "r"], ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", 
+       RowBox[{"Cot", "[", "\[Theta]", "]"}], ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", 
+        FractionBox[
+         RowBox[{"r", " ", 
+          SuperscriptBox[
+           RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"]}], 
+         RowBox[{"\[Xi]", "[", "r", "]"}]]}], ",", 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"Cos", "[", "\[Theta]", "]"}]}], " ", 
+        RowBox[{"Sin", "[", "\[Theta]", "]"}]}], ",", "0", ",", "0"}], "}"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "0", ",", 
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["\[Eta]", "\[Prime]",
+          MultilineFunction->None], "[", "r", "]"}], 
+        RowBox[{"2", " ", 
+         RowBox[{"\[Eta]", "[", "r", "]"}]}]]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["\[Eta]", "\[Prime]",
+          MultilineFunction->None], "[", "r", "]"}], 
+        RowBox[{"2", " ", 
+         RowBox[{"\[Xi]", "[", "r", "]"}]}]], ",", "0", ",", "0", ",", "0"}], 
+      "}"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.710531523976372*^9, 
+  3.710531551594029*^9}},ExpressionUUID->"7b0829ee-62f7-47cd-ae36-\
+d31bb43a9e7f"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {
+      RowBox[{"(", "\[NoBreak]", 
+       TagBox[GridBox[{
+          {
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["\[Xi]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}], 
+            RowBox[{"2", " ", 
+             RowBox[{"\[Xi]", "[", "r", "]"}]}]]},
+          {"0"},
+          {"0"},
+          {"0"}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.5599999999999999]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        Column], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", 
+       TagBox[GridBox[{
+          {"0"},
+          {
+           FractionBox["1", "r"]},
+          {"0"},
+          {"0"}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.5599999999999999]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        Column], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", 
+       TagBox[GridBox[{
+          {"0"},
+          {"0"},
+          {
+           FractionBox["1", "r"]},
+          {"0"}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.5599999999999999]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        Column], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", 
+       TagBox[GridBox[{
+          {"0"},
+          {"0"},
+          {"0"},
+          {
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["\[Eta]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}], 
+            RowBox[{"2", " ", 
+             RowBox[{"\[Eta]", "[", "r", "]"}]}]]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.5599999999999999]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        Column], "\[NoBreak]", ")"}]},
+     {
+      RowBox[{"(", "\[NoBreak]", 
+       TagBox[GridBox[{
+          {"0"},
+          {
+           FractionBox["1", "r"]},
+          {"0"},
+          {"0"}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.5599999999999999]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        Column], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", 
+       TagBox[GridBox[{
+          {
+           RowBox[{"-", 
+            FractionBox["r", 
+             RowBox[{"\[Xi]", "[", "r", "]"}]]}]},
+          {"0"},
+          {"0"},
+          {"0"}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.5599999999999999]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        Column], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", 
+       TagBox[GridBox[{
+          {"0"},
+          {"0"},
+          {
+           RowBox[{"Cot", "[", "\[Theta]", "]"}]},
+          {"0"}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.5599999999999999]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        Column], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", 
+       TagBox[GridBox[{
+          {"0"},
+          {"0"},
+          {"0"},
+          {"0"}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.5599999999999999]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        Column], "\[NoBreak]", ")"}]},
+     {
+      RowBox[{"(", "\[NoBreak]", 
+       TagBox[GridBox[{
+          {"0"},
+          {"0"},
+          {
+           FractionBox["1", "r"]},
+          {"0"}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.5599999999999999]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        Column], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", 
+       TagBox[GridBox[{
+          {"0"},
+          {"0"},
+          {
+           RowBox[{"Cot", "[", "\[Theta]", "]"}]},
+          {"0"}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.5599999999999999]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        Column], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", 
+       TagBox[GridBox[{
+          {
+           RowBox[{"-", 
+            FractionBox[
+             RowBox[{"r", " ", 
+              SuperscriptBox[
+               RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"]}], 
+             RowBox[{"\[Xi]", "[", "r", "]"}]]}]},
+          {
+           RowBox[{
+            RowBox[{"-", 
+             RowBox[{"Cos", "[", "\[Theta]", "]"}]}], " ", 
+            RowBox[{"Sin", "[", "\[Theta]", "]"}]}]},
+          {"0"},
+          {"0"}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.5599999999999999]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        Column], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", 
+       TagBox[GridBox[{
+          {"0"},
+          {"0"},
+          {"0"},
+          {"0"}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.5599999999999999]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        Column], "\[NoBreak]", ")"}]},
+     {
+      RowBox[{"(", "\[NoBreak]", 
+       TagBox[GridBox[{
+          {"0"},
+          {"0"},
+          {"0"},
+          {
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["\[Eta]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}], 
+            RowBox[{"2", " ", 
+             RowBox[{"\[Eta]", "[", "r", "]"}]}]]}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.5599999999999999]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        Column], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", 
+       TagBox[GridBox[{
+          {"0"},
+          {"0"},
+          {"0"},
+          {"0"}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.5599999999999999]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        Column], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", 
+       TagBox[GridBox[{
+          {"0"},
+          {"0"},
+          {"0"},
+          {"0"}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.5599999999999999]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        Column], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", 
+       TagBox[GridBox[{
+          {
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["\[Eta]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}], 
+            RowBox[{"2", " ", 
+             RowBox[{"\[Xi]", "[", "r", "]"}]}]]},
+          {"0"},
+          {"0"},
+          {"0"}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.5599999999999999]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}],
+        Column], "\[NoBreak]", ")"}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.710531523976372*^9, 
+  3.710531551605933*^9}},ExpressionUUID->"0f4ff42d-605e-439c-a923-\
+71e287f158c8"]
+}, Open  ]],
+
+Cell["Riemann-Christoffel tensor", "Text",
+ CellChangeTimes->{
+  3.710531852936693*^9},ExpressionUUID->"14aa099d-330c-478d-9250-\
+2281a4c04feb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"R", " ", "=", " ", 
+  RowBox[{"Array", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{"D", "[", 
+        RowBox[{
+         RowBox[{"\[CapitalGamma]", "[", 
+          RowBox[{"[", 
+           RowBox[{"#2", ",", "#3", ",", "#4"}], "]"}], "]"}], ",", 
+         RowBox[{"Y", "[", 
+          RowBox[{"[", "#1", "]"}], "]"}]}], "]"}]}], "+", 
+      RowBox[{"D", "[", 
+       RowBox[{
+        RowBox[{"\[CapitalGamma]", "[", 
+         RowBox[{"[", 
+          RowBox[{"#1", ",", "#3", ",", "#4"}], "]"}], "]"}], ",", 
+        RowBox[{"Y", "[", 
+         RowBox[{"[", "#2", "]"}], "]"}]}], "]"}], "+", 
+      RowBox[{"Sum", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"\[CapitalGamma]", "[", 
+           RowBox[{"[", 
+            RowBox[{"#3", ",", "#1", ",", "m"}], "]"}], "]"}], " ", 
+          RowBox[{"\[CapitalGamma]", "[", 
+           RowBox[{"[", 
+            RowBox[{"#2", ",", "m", ",", "#4"}], "]"}], "]"}]}], "-", 
+         RowBox[{
+          RowBox[{"\[CapitalGamma]", "[", 
+           RowBox[{"[", 
+            RowBox[{"#3", ",", "#2", ",", "m"}], "]"}], "]"}], " ", 
+          RowBox[{"\[CapitalGamma]", "[", 
+           RowBox[{"[", 
+            RowBox[{"#1", ",", "m", ",", "#4"}], "]"}], "]"}]}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"m", ",", "4"}], "}"}]}], "]"}]}], "&"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"4", ",", "4", ",", "4", ",", "4"}], "}"}]}], "]"}]}], "\n", 
+ RowBox[{"MatrixForm", "[", "R", "]"}]}], "Code",
+ CellChangeTimes->{{3.71053159082969*^9, 3.7105317523132677`*^9}, {
+  3.71053186940106*^9, 
+  3.7105319789886713`*^9}},ExpressionUUID->"2357466c-727c-4c2c-b2e5-\
+4b2d47c7a7b5"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", 
+         FractionBox[
+          RowBox[{
+           SuperscriptBox["\[Xi]", "\[Prime]",
+            MultilineFunction->None], "[", "r", "]"}], 
+          RowBox[{"2", " ", "r", " ", 
+           RowBox[{"\[Xi]", "[", "r", "]"}]}]], ",", "0", ",", "0"}], "}"}], 
+       ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", 
+          FractionBox[
+           RowBox[{"r", " ", 
+            RowBox[{
+             SuperscriptBox["\[Xi]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}]}], 
+           RowBox[{"2", " ", 
+            SuperscriptBox[
+             RowBox[{"\[Xi]", "[", "r", "]"}], "2"]}]]}], ",", "0", ",", "0", 
+         ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", 
+         FractionBox[
+          RowBox[{
+           SuperscriptBox["\[Xi]", "\[Prime]",
+            MultilineFunction->None], "[", "r", "]"}], 
+          RowBox[{"2", " ", "r", " ", 
+           RowBox[{"\[Xi]", "[", "r", "]"}]}]], ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", 
+          FractionBox[
+           RowBox[{"r", " ", 
+            SuperscriptBox[
+             RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+            RowBox[{
+             SuperscriptBox["\[Xi]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}]}], 
+           RowBox[{"2", " ", 
+            SuperscriptBox[
+             RowBox[{"\[Xi]", "[", "r", "]"}], "2"]}]]}], ",", "0", ",", "0", 
+         ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", 
+         RowBox[{
+          FractionBox[
+           SuperscriptBox[
+            RowBox[{
+             SuperscriptBox["\[Eta]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}], "2"], 
+           RowBox[{"4", " ", 
+            SuperscriptBox[
+             RowBox[{"\[Eta]", "[", "r", "]"}], "2"]}]], "+", 
+          FractionBox[
+           RowBox[{
+            RowBox[{
+             SuperscriptBox["\[Eta]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}], " ", 
+            RowBox[{
+             SuperscriptBox["\[Xi]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}]}], 
+           RowBox[{"4", " ", 
+            RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]], "-", 
+          FractionBox[
+           RowBox[{
+            SuperscriptBox["\[Eta]", "\[Prime]\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}], 
+           RowBox[{"2", " ", 
+            RowBox[{"\[Eta]", "[", "r", "]"}]}]]}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          FractionBox[
+           SuperscriptBox[
+            RowBox[{
+             SuperscriptBox["\[Eta]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}], "2"], 
+           RowBox[{"4", " ", 
+            RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]], "+", 
+          FractionBox[
+           RowBox[{
+            RowBox[{
+             SuperscriptBox["\[Eta]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}], " ", 
+            RowBox[{
+             SuperscriptBox["\[Xi]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}]}], 
+           RowBox[{"4", " ", 
+            SuperscriptBox[
+             RowBox[{"\[Xi]", "[", "r", "]"}], "2"]}]], "-", 
+          FractionBox[
+           RowBox[{
+            SuperscriptBox["\[Eta]", "\[Prime]\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}], 
+           RowBox[{"2", " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], ",", "0", ",", "0", ",", 
+         "0"}], "}"}]}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", 
+         RowBox[{"-", 
+          FractionBox[
+           RowBox[{
+            SuperscriptBox["\[Xi]", "\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}], 
+           RowBox[{"2", " ", "r", " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], ",", "0", ",", "0"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         FractionBox[
+          RowBox[{"r", " ", 
+           RowBox[{
+            SuperscriptBox["\[Xi]", "\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}]}], 
+          RowBox[{"2", " ", 
+           SuperscriptBox[
+            RowBox[{"\[Xi]", "[", "r", "]"}], "2"]}]], ",", "0", ",", "0", 
+         ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", 
+         RowBox[{
+          RowBox[{"-", 
+           SuperscriptBox[
+            RowBox[{"Cot", "[", "\[Theta]", "]"}], "2"]}], "+", 
+          SuperscriptBox[
+           RowBox[{"Csc", "[", "\[Theta]", "]"}], "2"], "-", 
+          FractionBox["1", 
+           RowBox[{"\[Xi]", "[", "r", "]"}]]}], ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", 
+         RowBox[{
+          RowBox[{"-", 
+           SuperscriptBox[
+            RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"]}], "+", 
+          FractionBox[
+           SuperscriptBox[
+            RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], 
+           RowBox[{"\[Xi]", "[", "r", "]"}]]}], ",", "0", ",", "0"}], "}"}], 
+       ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", 
+         RowBox[{"-", 
+          FractionBox[
+           RowBox[{"r", " ", 
+            RowBox[{
+             SuperscriptBox["\[Eta]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}]}], 
+           RowBox[{"2", " ", 
+            RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]]}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", 
+         RowBox[{"-", 
+          FractionBox[
+           RowBox[{
+            SuperscriptBox["\[Eta]", "\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}], 
+           RowBox[{"2", " ", "r", " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], ",", "0", ",", "0"}], 
+        "}"}]}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", 
+         RowBox[{"-", 
+          FractionBox[
+           RowBox[{
+            SuperscriptBox["\[Xi]", "\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}], 
+           RowBox[{"2", " ", "r", " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         FractionBox[
+          RowBox[{"r", " ", 
+           SuperscriptBox[
+            RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+           RowBox[{
+            SuperscriptBox["\[Xi]", "\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}]}], 
+          RowBox[{"2", " ", 
+           SuperscriptBox[
+            RowBox[{"\[Xi]", "[", "r", "]"}], "2"]}]], ",", "0", ",", "0", 
+         ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"Cot", "[", "\[Theta]", "]"}], "2"], "-", 
+          SuperscriptBox[
+           RowBox[{"Csc", "[", "\[Theta]", "]"}], "2"], "+", 
+          FractionBox["1", 
+           RowBox[{"\[Xi]", "[", "r", "]"}]]}], ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], "-", 
+          FractionBox[
+           SuperscriptBox[
+            RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], 
+           RowBox[{"\[Xi]", "[", "r", "]"}]]}], ",", "0", ",", "0"}], "}"}], 
+       ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", 
+         RowBox[{"-", 
+          FractionBox[
+           RowBox[{"r", " ", 
+            SuperscriptBox[
+             RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+            RowBox[{
+             SuperscriptBox["\[Eta]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}]}], 
+           RowBox[{"2", " ", 
+            RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]]}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", 
+         RowBox[{"-", 
+          FractionBox[
+           RowBox[{
+            SuperscriptBox["\[Eta]", "\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}], 
+           RowBox[{"2", " ", "r", " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], ",", "0"}], "}"}]}], 
+      "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", 
+         RowBox[{
+          RowBox[{"-", 
+           FractionBox[
+            SuperscriptBox[
+             RowBox[{
+              SuperscriptBox["\[Eta]", "\[Prime]",
+               MultilineFunction->None], "[", "r", "]"}], "2"], 
+            RowBox[{"4", " ", 
+             SuperscriptBox[
+              RowBox[{"\[Eta]", "[", "r", "]"}], "2"]}]]}], "-", 
+          FractionBox[
+           RowBox[{
+            RowBox[{
+             SuperscriptBox["\[Eta]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}], " ", 
+            RowBox[{
+             SuperscriptBox["\[Xi]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}]}], 
+           RowBox[{"4", " ", 
+            RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]], "+", 
+          FractionBox[
+           RowBox[{
+            SuperscriptBox["\[Eta]", "\[Prime]\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}], 
+           RowBox[{"2", " ", 
+            RowBox[{"\[Eta]", "[", "r", "]"}]}]]}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", 
+           FractionBox[
+            SuperscriptBox[
+             RowBox[{
+              SuperscriptBox["\[Eta]", "\[Prime]",
+               MultilineFunction->None], "[", "r", "]"}], "2"], 
+            RowBox[{"4", " ", 
+             RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+             RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], "-", 
+          FractionBox[
+           RowBox[{
+            RowBox[{
+             SuperscriptBox["\[Eta]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}], " ", 
+            RowBox[{
+             SuperscriptBox["\[Xi]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}]}], 
+           RowBox[{"4", " ", 
+            SuperscriptBox[
+             RowBox[{"\[Xi]", "[", "r", "]"}], "2"]}]], "+", 
+          FractionBox[
+           RowBox[{
+            SuperscriptBox["\[Eta]", "\[Prime]\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}], 
+           RowBox[{"2", " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], ",", "0", ",", "0", ",", 
+         "0"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", 
+         FractionBox[
+          RowBox[{"r", " ", 
+           RowBox[{
+            SuperscriptBox["\[Eta]", "\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}]}], 
+          RowBox[{"2", " ", 
+           RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+           RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", 
+         FractionBox[
+          RowBox[{
+           SuperscriptBox["\[Eta]", "\[Prime]",
+            MultilineFunction->None], "[", "r", "]"}], 
+          RowBox[{"2", " ", "r", " ", 
+           RowBox[{"\[Xi]", "[", "r", "]"}]}]], ",", "0", ",", "0"}], "}"}]}],
+       "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", 
+         FractionBox[
+          RowBox[{"r", " ", 
+           SuperscriptBox[
+            RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+           RowBox[{
+            SuperscriptBox["\[Eta]", "\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}]}], 
+          RowBox[{"2", " ", 
+           RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+           RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", 
+         FractionBox[
+          RowBox[{
+           SuperscriptBox["\[Eta]", "\[Prime]",
+            MultilineFunction->None], "[", "r", "]"}], 
+          RowBox[{"2", " ", "r", " ", 
+           RowBox[{"\[Xi]", "[", "r", "]"}]}]], ",", "0"}], "}"}]}], "}"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}]}], 
+    "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.710531969841941*^9, 
+  3.710531979671335*^9}},ExpressionUUID->"0a97f1c6-3a3d-4092-b414-\
+7be831bf5ca6"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", 
+          FractionBox[
+           RowBox[{
+            SuperscriptBox["\[Xi]", "\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}], 
+           RowBox[{"2", " ", "r", " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]], "0", "0"},
+         {
+          RowBox[{"-", 
+           FractionBox[
+            RowBox[{"r", " ", 
+             RowBox[{
+              SuperscriptBox["\[Xi]", "\[Prime]",
+               MultilineFunction->None], "[", "r", "]"}]}], 
+            RowBox[{"2", " ", 
+             SuperscriptBox[
+              RowBox[{"\[Xi]", "[", "r", "]"}], "2"]}]]}], "0", "0", "0"},
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", "0", 
+          FractionBox[
+           RowBox[{
+            SuperscriptBox["\[Xi]", "\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}], 
+           RowBox[{"2", " ", "r", " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]], "0"},
+         {"0", "0", "0", "0"},
+         {
+          RowBox[{"-", 
+           FractionBox[
+            RowBox[{"r", " ", 
+             SuperscriptBox[
+              RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+             RowBox[{
+              SuperscriptBox["\[Xi]", "\[Prime]",
+               MultilineFunction->None], "[", "r", "]"}]}], 
+            RowBox[{"2", " ", 
+             SuperscriptBox[
+              RowBox[{"\[Xi]", "[", "r", "]"}], "2"]}]]}], "0", "0", "0"},
+         {"0", "0", "0", "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", "0", "0", 
+          RowBox[{
+           FractionBox[
+            SuperscriptBox[
+             RowBox[{
+              SuperscriptBox["\[Eta]", "\[Prime]",
+               MultilineFunction->None], "[", "r", "]"}], "2"], 
+            RowBox[{"4", " ", 
+             SuperscriptBox[
+              RowBox[{"\[Eta]", "[", "r", "]"}], "2"]}]], "+", 
+           FractionBox[
+            RowBox[{
+             RowBox[{
+              SuperscriptBox["\[Eta]", "\[Prime]",
+               MultilineFunction->None], "[", "r", "]"}], " ", 
+             RowBox[{
+              SuperscriptBox["\[Xi]", "\[Prime]",
+               MultilineFunction->None], "[", "r", "]"}]}], 
+            RowBox[{"4", " ", 
+             RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+             RowBox[{"\[Xi]", "[", "r", "]"}]}]], "-", 
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["\[Eta]", "\[Prime]\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}], 
+            RowBox[{"2", " ", 
+             RowBox[{"\[Eta]", "[", "r", "]"}]}]]}]},
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"},
+         {
+          RowBox[{
+           FractionBox[
+            SuperscriptBox[
+             RowBox[{
+              SuperscriptBox["\[Eta]", "\[Prime]",
+               MultilineFunction->None], "[", "r", "]"}], "2"], 
+            RowBox[{"4", " ", 
+             RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+             RowBox[{"\[Xi]", "[", "r", "]"}]}]], "+", 
+           FractionBox[
+            RowBox[{
+             RowBox[{
+              SuperscriptBox["\[Eta]", "\[Prime]",
+               MultilineFunction->None], "[", "r", "]"}], " ", 
+             RowBox[{
+              SuperscriptBox["\[Xi]", "\[Prime]",
+               MultilineFunction->None], "[", "r", "]"}]}], 
+            RowBox[{"4", " ", 
+             SuperscriptBox[
+              RowBox[{"\[Xi]", "[", "r", "]"}], "2"]}]], "-", 
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["\[Eta]", "\[Prime]\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}], 
+            RowBox[{"2", " ", 
+             RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], "0", "0", "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}]},
+     {
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", 
+          RowBox[{"-", 
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["\[Xi]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}], 
+            RowBox[{"2", " ", "r", " ", 
+             RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], "0", "0"},
+         {
+          FractionBox[
+           RowBox[{"r", " ", 
+            RowBox[{
+             SuperscriptBox["\[Xi]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}]}], 
+           RowBox[{"2", " ", 
+            SuperscriptBox[
+             RowBox[{"\[Xi]", "[", "r", "]"}], "2"]}]], "0", "0", "0"},
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", "0", "0", "0"},
+         {"0", "0", 
+          RowBox[{
+           RowBox[{"-", 
+            SuperscriptBox[
+             RowBox[{"Cot", "[", "\[Theta]", "]"}], "2"]}], "+", 
+           SuperscriptBox[
+            RowBox[{"Csc", "[", "\[Theta]", "]"}], "2"], "-", 
+           FractionBox["1", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]]}], "0"},
+         {"0", 
+          RowBox[{
+           RowBox[{"-", 
+            SuperscriptBox[
+             RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"]}], "+", 
+           FractionBox[
+            SuperscriptBox[
+             RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], 
+            RowBox[{"\[Xi]", "[", "r", "]"}]]}], "0", "0"},
+         {"0", "0", "0", "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", 
+          RowBox[{"-", 
+           FractionBox[
+            RowBox[{"r", " ", 
+             RowBox[{
+              SuperscriptBox["\[Eta]", "\[Prime]",
+               MultilineFunction->None], "[", "r", "]"}]}], 
+            RowBox[{"2", " ", 
+             RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+             RowBox[{"\[Xi]", "[", "r", "]"}]}]]}]},
+         {"0", "0", "0", "0"},
+         {"0", 
+          RowBox[{"-", 
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["\[Eta]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}], 
+            RowBox[{"2", " ", "r", " ", 
+             RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], "0", "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}]},
+     {
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", "0", 
+          RowBox[{"-", 
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["\[Xi]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}], 
+            RowBox[{"2", " ", "r", " ", 
+             RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], "0"},
+         {"0", "0", "0", "0"},
+         {
+          FractionBox[
+           RowBox[{"r", " ", 
+            SuperscriptBox[
+             RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+            RowBox[{
+             SuperscriptBox["\[Xi]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}]}], 
+           RowBox[{"2", " ", 
+            SuperscriptBox[
+             RowBox[{"\[Xi]", "[", "r", "]"}], "2"]}]], "0", "0", "0"},
+         {"0", "0", "0", "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", "0", "0", "0"},
+         {"0", "0", 
+          RowBox[{
+           SuperscriptBox[
+            RowBox[{"Cot", "[", "\[Theta]", "]"}], "2"], "-", 
+           SuperscriptBox[
+            RowBox[{"Csc", "[", "\[Theta]", "]"}], "2"], "+", 
+           FractionBox["1", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]]}], "0"},
+         {"0", 
+          RowBox[{
+           SuperscriptBox[
+            RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], "-", 
+           FractionBox[
+            SuperscriptBox[
+             RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], 
+            RowBox[{"\[Xi]", "[", "r", "]"}]]}], "0", "0"},
+         {"0", "0", "0", "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", 
+          RowBox[{"-", 
+           FractionBox[
+            RowBox[{"r", " ", 
+             SuperscriptBox[
+              RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+             RowBox[{
+              SuperscriptBox["\[Eta]", "\[Prime]",
+               MultilineFunction->None], "[", "r", "]"}]}], 
+            RowBox[{"2", " ", 
+             RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+             RowBox[{"\[Xi]", "[", "r", "]"}]}]]}]},
+         {"0", "0", 
+          RowBox[{"-", 
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["\[Eta]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}], 
+            RowBox[{"2", " ", "r", " ", 
+             RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}]},
+     {
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", "0", "0", 
+          RowBox[{
+           RowBox[{"-", 
+            FractionBox[
+             SuperscriptBox[
+              RowBox[{
+               SuperscriptBox["\[Eta]", "\[Prime]",
+                MultilineFunction->None], "[", "r", "]"}], "2"], 
+             RowBox[{"4", " ", 
+              SuperscriptBox[
+               RowBox[{"\[Eta]", "[", "r", "]"}], "2"]}]]}], "-", 
+           FractionBox[
+            RowBox[{
+             RowBox[{
+              SuperscriptBox["\[Eta]", "\[Prime]",
+               MultilineFunction->None], "[", "r", "]"}], " ", 
+             RowBox[{
+              SuperscriptBox["\[Xi]", "\[Prime]",
+               MultilineFunction->None], "[", "r", "]"}]}], 
+            RowBox[{"4", " ", 
+             RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+             RowBox[{"\[Xi]", "[", "r", "]"}]}]], "+", 
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["\[Eta]", "\[Prime]\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}], 
+            RowBox[{"2", " ", 
+             RowBox[{"\[Eta]", "[", "r", "]"}]}]]}]},
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"},
+         {
+          RowBox[{
+           RowBox[{"-", 
+            FractionBox[
+             SuperscriptBox[
+              RowBox[{
+               SuperscriptBox["\[Eta]", "\[Prime]",
+                MultilineFunction->None], "[", "r", "]"}], "2"], 
+             RowBox[{"4", " ", 
+              RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+              RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], "-", 
+           FractionBox[
+            RowBox[{
+             RowBox[{
+              SuperscriptBox["\[Eta]", "\[Prime]",
+               MultilineFunction->None], "[", "r", "]"}], " ", 
+             RowBox[{
+              SuperscriptBox["\[Xi]", "\[Prime]",
+               MultilineFunction->None], "[", "r", "]"}]}], 
+            RowBox[{"4", " ", 
+             SuperscriptBox[
+              RowBox[{"\[Xi]", "[", "r", "]"}], "2"]}]], "+", 
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["\[Eta]", "\[Prime]\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}], 
+            RowBox[{"2", " ", 
+             RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], "0", "0", "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", 
+          FractionBox[
+           RowBox[{"r", " ", 
+            RowBox[{
+             SuperscriptBox["\[Eta]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}]}], 
+           RowBox[{"2", " ", 
+            RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]]},
+         {"0", "0", "0", "0"},
+         {"0", 
+          FractionBox[
+           RowBox[{
+            SuperscriptBox["\[Eta]", "\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}], 
+           RowBox[{"2", " ", "r", " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]], "0", "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", 
+          FractionBox[
+           RowBox[{"r", " ", 
+            SuperscriptBox[
+             RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+            RowBox[{
+             SuperscriptBox["\[Eta]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}]}], 
+           RowBox[{"2", " ", 
+            RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]]},
+         {"0", "0", 
+          FractionBox[
+           RowBox[{
+            SuperscriptBox["\[Eta]", "\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}], 
+           RowBox[{"2", " ", "r", " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]], "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.710531969841941*^9, 
+  3.7105319796909237`*^9}},ExpressionUUID->"22c7a6f0-a96f-403f-9fa5-\
+a60b3cab80c5"]
+}, Open  ]],
+
+Cell["Covariant curvature tensor", "Text",
+ CellChangeTimes->{{3.7105320756742983`*^9, 
+  3.710532079880521*^9}},ExpressionUUID->"7ae95e70-0565-48dc-8e9e-\
+8838e0319ad9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Array", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"g", "[", 
+        RowBox[{"[", 
+         RowBox[{"#4", ",", "m"}], "]"}], "]"}], 
+       RowBox[{"R", "[", 
+        RowBox[{"[", 
+         RowBox[{"#1", ",", "#2", ",", "#3", ",", "m"}], "]"}], "]"}]}], ",", 
+      
+      RowBox[{"{", 
+       RowBox[{"m", ",", "4"}], "}"}]}], "]"}], "&"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "4", ",", "4", ",", "4"}], "}"}]}], "]"}], "\n", 
+ RowBox[{"MatrixForm", "[", "%", "]"}]}], "Code",
+ CellChangeTimes->{{3.710532011474722*^9, 
+  3.7105320917375593`*^9}},ExpressionUUID->"d1791b20-2e5b-4979-90e1-\
+162c3569dac9"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", 
+         RowBox[{"-", 
+          FractionBox[
+           RowBox[{"r", " ", 
+            RowBox[{
+             SuperscriptBox["\[Xi]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}]}], 
+           RowBox[{"2", " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], ",", "0", ",", "0"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         FractionBox[
+          RowBox[{"r", " ", 
+           RowBox[{
+            SuperscriptBox["\[Xi]", "\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}]}], 
+          RowBox[{"2", " ", 
+           RowBox[{"\[Xi]", "[", "r", "]"}]}]], ",", "0", ",", "0", ",", 
+         "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", 
+         RowBox[{"-", 
+          FractionBox[
+           RowBox[{"r", " ", 
+            SuperscriptBox[
+             RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+            RowBox[{
+             SuperscriptBox["\[Xi]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}]}], 
+           RowBox[{"2", " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         FractionBox[
+          RowBox[{"r", " ", 
+           SuperscriptBox[
+            RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+           RowBox[{
+            SuperscriptBox["\[Xi]", "\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}]}], 
+          RowBox[{"2", " ", 
+           RowBox[{"\[Xi]", "[", "r", "]"}]}]], ",", "0", ",", "0", ",", 
+         "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", 
+         RowBox[{
+          RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            FractionBox[
+             SuperscriptBox[
+              RowBox[{
+               SuperscriptBox["\[Eta]", "\[Prime]",
+                MultilineFunction->None], "[", "r", "]"}], "2"], 
+             RowBox[{"4", " ", 
+              SuperscriptBox[
+               RowBox[{"\[Eta]", "[", "r", "]"}], "2"]}]], "+", 
+            FractionBox[
+             RowBox[{
+              RowBox[{
+               SuperscriptBox["\[Eta]", "\[Prime]",
+                MultilineFunction->None], "[", "r", "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["\[Xi]", "\[Prime]",
+                MultilineFunction->None], "[", "r", "]"}]}], 
+             RowBox[{"4", " ", 
+              RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+              RowBox[{"\[Xi]", "[", "r", "]"}]}]], "-", 
+            FractionBox[
+             RowBox[{
+              SuperscriptBox["\[Eta]", "\[Prime]\[Prime]",
+               MultilineFunction->None], "[", "r", "]"}], 
+             RowBox[{"2", " ", 
+              RowBox[{"\[Eta]", "[", "r", "]"}]}]]}], ")"}]}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", 
+           RowBox[{"\[Xi]", "[", "r", "]"}]}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            FractionBox[
+             SuperscriptBox[
+              RowBox[{
+               SuperscriptBox["\[Eta]", "\[Prime]",
+                MultilineFunction->None], "[", "r", "]"}], "2"], 
+             RowBox[{"4", " ", 
+              RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+              RowBox[{"\[Xi]", "[", "r", "]"}]}]], "+", 
+            FractionBox[
+             RowBox[{
+              RowBox[{
+               SuperscriptBox["\[Eta]", "\[Prime]",
+                MultilineFunction->None], "[", "r", "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["\[Xi]", "\[Prime]",
+                MultilineFunction->None], "[", "r", "]"}]}], 
+             RowBox[{"4", " ", 
+              SuperscriptBox[
+               RowBox[{"\[Xi]", "[", "r", "]"}], "2"]}]], "-", 
+            FractionBox[
+             RowBox[{
+              SuperscriptBox["\[Eta]", "\[Prime]\[Prime]",
+               MultilineFunction->None], "[", "r", "]"}], 
+             RowBox[{"2", " ", 
+              RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], ")"}]}], ",", "0", ",", 
+         "0", ",", "0"}], "}"}]}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", 
+         FractionBox[
+          RowBox[{"r", " ", 
+           RowBox[{
+            SuperscriptBox["\[Xi]", "\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}]}], 
+          RowBox[{"2", " ", 
+           RowBox[{"\[Xi]", "[", "r", "]"}]}]], ",", "0", ",", "0"}], "}"}], 
+       ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", 
+          FractionBox[
+           RowBox[{"r", " ", 
+            RowBox[{
+             SuperscriptBox["\[Xi]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}]}], 
+           RowBox[{"2", " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], ",", "0", ",", "0", ",", 
+         "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", 
+         RowBox[{
+          RowBox[{"-", 
+           SuperscriptBox["r", "2"]}], " ", 
+          SuperscriptBox[
+           RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", 
+             SuperscriptBox[
+              RowBox[{"Cot", "[", "\[Theta]", "]"}], "2"]}], "+", 
+            SuperscriptBox[
+             RowBox[{"Csc", "[", "\[Theta]", "]"}], "2"], "-", 
+            FractionBox["1", 
+             RowBox[{"\[Xi]", "[", "r", "]"}]]}], ")"}]}], ",", "0"}], "}"}], 
+       ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", 
+         RowBox[{
+          RowBox[{"-", 
+           SuperscriptBox["r", "2"]}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", 
+             SuperscriptBox[
+              RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"]}], "+", 
+            FractionBox[
+             SuperscriptBox[
+              RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], 
+             RowBox[{"\[Xi]", "[", "r", "]"}]]}], ")"}]}], ",", "0", ",", 
+         "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", 
+         RowBox[{"-", 
+          FractionBox[
+           RowBox[{"r", " ", 
+            RowBox[{
+             SuperscriptBox["\[Eta]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}]}], 
+           RowBox[{"2", " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]]}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", 
+         FractionBox[
+          RowBox[{"r", " ", 
+           RowBox[{
+            SuperscriptBox["\[Eta]", "\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}]}], 
+          RowBox[{"2", " ", 
+           RowBox[{"\[Xi]", "[", "r", "]"}]}]], ",", "0", ",", "0"}], "}"}]}],
+       "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", 
+         FractionBox[
+          RowBox[{"r", " ", 
+           SuperscriptBox[
+            RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+           RowBox[{
+            SuperscriptBox["\[Xi]", "\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}]}], 
+          RowBox[{"2", " ", 
+           RowBox[{"\[Xi]", "[", "r", "]"}]}]], ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", 
+          FractionBox[
+           RowBox[{"r", " ", 
+            SuperscriptBox[
+             RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+            RowBox[{
+             SuperscriptBox["\[Xi]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}]}], 
+           RowBox[{"2", " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], ",", "0", ",", "0", ",", 
+         "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", 
+         RowBox[{
+          RowBox[{"-", 
+           SuperscriptBox["r", "2"]}], " ", 
+          SuperscriptBox[
+           RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            SuperscriptBox[
+             RowBox[{"Cot", "[", "\[Theta]", "]"}], "2"], "-", 
+            SuperscriptBox[
+             RowBox[{"Csc", "[", "\[Theta]", "]"}], "2"], "+", 
+            FractionBox["1", 
+             RowBox[{"\[Xi]", "[", "r", "]"}]]}], ")"}]}], ",", "0"}], "}"}], 
+       ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", 
+         RowBox[{
+          RowBox[{"-", 
+           SuperscriptBox["r", "2"]}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            SuperscriptBox[
+             RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], "-", 
+            FractionBox[
+             SuperscriptBox[
+              RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], 
+             RowBox[{"\[Xi]", "[", "r", "]"}]]}], ")"}]}], ",", "0", ",", 
+         "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", 
+         RowBox[{"-", 
+          FractionBox[
+           RowBox[{"r", " ", 
+            SuperscriptBox[
+             RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+            RowBox[{
+             SuperscriptBox["\[Eta]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}]}], 
+           RowBox[{"2", " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]]}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", 
+         FractionBox[
+          RowBox[{"r", " ", 
+           SuperscriptBox[
+            RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+           RowBox[{
+            SuperscriptBox["\[Eta]", "\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}]}], 
+          RowBox[{"2", " ", 
+           RowBox[{"\[Xi]", "[", "r", "]"}]}]], ",", "0"}], "}"}]}], "}"}]}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", 
+         RowBox[{
+          RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", 
+             FractionBox[
+              SuperscriptBox[
+               RowBox[{
+                SuperscriptBox["\[Eta]", "\[Prime]",
+                 MultilineFunction->None], "[", "r", "]"}], "2"], 
+              RowBox[{"4", " ", 
+               SuperscriptBox[
+                RowBox[{"\[Eta]", "[", "r", "]"}], "2"]}]]}], "-", 
+            FractionBox[
+             RowBox[{
+              RowBox[{
+               SuperscriptBox["\[Eta]", "\[Prime]",
+                MultilineFunction->None], "[", "r", "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["\[Xi]", "\[Prime]",
+                MultilineFunction->None], "[", "r", "]"}]}], 
+             RowBox[{"4", " ", 
+              RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+              RowBox[{"\[Xi]", "[", "r", "]"}]}]], "+", 
+            FractionBox[
+             RowBox[{
+              SuperscriptBox["\[Eta]", "\[Prime]\[Prime]",
+               MultilineFunction->None], "[", "r", "]"}], 
+             RowBox[{"2", " ", 
+              RowBox[{"\[Eta]", "[", "r", "]"}]}]]}], ")"}]}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", 
+           RowBox[{"\[Xi]", "[", "r", "]"}]}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", 
+             FractionBox[
+              SuperscriptBox[
+               RowBox[{
+                SuperscriptBox["\[Eta]", "\[Prime]",
+                 MultilineFunction->None], "[", "r", "]"}], "2"], 
+              RowBox[{"4", " ", 
+               RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+               RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], "-", 
+            FractionBox[
+             RowBox[{
+              RowBox[{
+               SuperscriptBox["\[Eta]", "\[Prime]",
+                MultilineFunction->None], "[", "r", "]"}], " ", 
+              RowBox[{
+               SuperscriptBox["\[Xi]", "\[Prime]",
+                MultilineFunction->None], "[", "r", "]"}]}], 
+             RowBox[{"4", " ", 
+              SuperscriptBox[
+               RowBox[{"\[Xi]", "[", "r", "]"}], "2"]}]], "+", 
+            FractionBox[
+             RowBox[{
+              SuperscriptBox["\[Eta]", "\[Prime]\[Prime]",
+               MultilineFunction->None], "[", "r", "]"}], 
+             RowBox[{"2", " ", 
+              RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], ")"}]}], ",", "0", ",", 
+         "0", ",", "0"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", 
+         FractionBox[
+          RowBox[{"r", " ", 
+           RowBox[{
+            SuperscriptBox["\[Eta]", "\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}]}], 
+          RowBox[{"2", " ", 
+           RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", 
+         RowBox[{"-", 
+          FractionBox[
+           RowBox[{"r", " ", 
+            RowBox[{
+             SuperscriptBox["\[Eta]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}]}], 
+           RowBox[{"2", " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], ",", "0", ",", "0"}], 
+        "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", 
+         FractionBox[
+          RowBox[{"r", " ", 
+           SuperscriptBox[
+            RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+           RowBox[{
+            SuperscriptBox["\[Eta]", "\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}]}], 
+          RowBox[{"2", " ", 
+           RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", 
+         RowBox[{"-", 
+          FractionBox[
+           RowBox[{"r", " ", 
+            SuperscriptBox[
+             RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+            RowBox[{
+             SuperscriptBox["\[Eta]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}]}], 
+           RowBox[{"2", " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], ",", "0"}], "}"}]}], "}"}],
+      ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}]}], 
+    "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.710532082381344*^9, 
+  3.710532092390233*^9}},ExpressionUUID->"f780abf9-8f1f-4dbe-b2fb-\
+242fc40c7bce"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", 
+          RowBox[{"-", 
+           FractionBox[
+            RowBox[{"r", " ", 
+             RowBox[{
+              SuperscriptBox["\[Xi]", "\[Prime]",
+               MultilineFunction->None], "[", "r", "]"}]}], 
+            RowBox[{"2", " ", 
+             RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], "0", "0"},
+         {
+          FractionBox[
+           RowBox[{"r", " ", 
+            RowBox[{
+             SuperscriptBox["\[Xi]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}]}], 
+           RowBox[{"2", " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]], "0", "0", "0"},
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", "0", 
+          RowBox[{"-", 
+           FractionBox[
+            RowBox[{"r", " ", 
+             SuperscriptBox[
+              RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+             RowBox[{
+              SuperscriptBox["\[Xi]", "\[Prime]",
+               MultilineFunction->None], "[", "r", "]"}]}], 
+            RowBox[{"2", " ", 
+             RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], "0"},
+         {"0", "0", "0", "0"},
+         {
+          FractionBox[
+           RowBox[{"r", " ", 
+            SuperscriptBox[
+             RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+            RowBox[{
+             SuperscriptBox["\[Xi]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}]}], 
+           RowBox[{"2", " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]], "0", "0", "0"},
+         {"0", "0", "0", "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", "0", "0", 
+          RowBox[{
+           RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox[
+              SuperscriptBox[
+               RowBox[{
+                SuperscriptBox["\[Eta]", "\[Prime]",
+                 MultilineFunction->None], "[", "r", "]"}], "2"], 
+              RowBox[{"4", " ", 
+               SuperscriptBox[
+                RowBox[{"\[Eta]", "[", "r", "]"}], "2"]}]], "+", 
+             FractionBox[
+              RowBox[{
+               RowBox[{
+                SuperscriptBox["\[Eta]", "\[Prime]",
+                 MultilineFunction->None], "[", "r", "]"}], " ", 
+               RowBox[{
+                SuperscriptBox["\[Xi]", "\[Prime]",
+                 MultilineFunction->None], "[", "r", "]"}]}], 
+              RowBox[{"4", " ", 
+               RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+               RowBox[{"\[Xi]", "[", "r", "]"}]}]], "-", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["\[Eta]", "\[Prime]\[Prime]",
+                MultilineFunction->None], "[", "r", "]"}], 
+              RowBox[{"2", " ", 
+               RowBox[{"\[Eta]", "[", "r", "]"}]}]]}], ")"}]}]},
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"},
+         {
+          RowBox[{
+           RowBox[{"-", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox[
+              SuperscriptBox[
+               RowBox[{
+                SuperscriptBox["\[Eta]", "\[Prime]",
+                 MultilineFunction->None], "[", "r", "]"}], "2"], 
+              RowBox[{"4", " ", 
+               RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+               RowBox[{"\[Xi]", "[", "r", "]"}]}]], "+", 
+             FractionBox[
+              RowBox[{
+               RowBox[{
+                SuperscriptBox["\[Eta]", "\[Prime]",
+                 MultilineFunction->None], "[", "r", "]"}], " ", 
+               RowBox[{
+                SuperscriptBox["\[Xi]", "\[Prime]",
+                 MultilineFunction->None], "[", "r", "]"}]}], 
+              RowBox[{"4", " ", 
+               SuperscriptBox[
+                RowBox[{"\[Xi]", "[", "r", "]"}], "2"]}]], "-", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["\[Eta]", "\[Prime]\[Prime]",
+                MultilineFunction->None], "[", "r", "]"}], 
+              RowBox[{"2", " ", 
+               RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], ")"}]}], "0", "0", "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}]},
+     {
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", 
+          FractionBox[
+           RowBox[{"r", " ", 
+            RowBox[{
+             SuperscriptBox["\[Xi]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}]}], 
+           RowBox[{"2", " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]], "0", "0"},
+         {
+          RowBox[{"-", 
+           FractionBox[
+            RowBox[{"r", " ", 
+             RowBox[{
+              SuperscriptBox["\[Xi]", "\[Prime]",
+               MultilineFunction->None], "[", "r", "]"}]}], 
+            RowBox[{"2", " ", 
+             RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], "0", "0", "0"},
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", "0", "0", "0"},
+         {"0", "0", 
+          RowBox[{
+           RowBox[{"-", 
+            SuperscriptBox["r", "2"]}], " ", 
+           SuperscriptBox[
+            RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", 
+              SuperscriptBox[
+               RowBox[{"Cot", "[", "\[Theta]", "]"}], "2"]}], "+", 
+             SuperscriptBox[
+              RowBox[{"Csc", "[", "\[Theta]", "]"}], "2"], "-", 
+             FractionBox["1", 
+              RowBox[{"\[Xi]", "[", "r", "]"}]]}], ")"}]}], "0"},
+         {"0", 
+          RowBox[{
+           RowBox[{"-", 
+            SuperscriptBox["r", "2"]}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", 
+              SuperscriptBox[
+               RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"]}], "+", 
+             FractionBox[
+              SuperscriptBox[
+               RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], 
+              RowBox[{"\[Xi]", "[", "r", "]"}]]}], ")"}]}], "0", "0"},
+         {"0", "0", "0", "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", 
+          RowBox[{"-", 
+           FractionBox[
+            RowBox[{"r", " ", 
+             RowBox[{
+              SuperscriptBox["\[Eta]", "\[Prime]",
+               MultilineFunction->None], "[", "r", "]"}]}], 
+            RowBox[{"2", " ", 
+             RowBox[{"\[Xi]", "[", "r", "]"}]}]]}]},
+         {"0", "0", "0", "0"},
+         {"0", 
+          FractionBox[
+           RowBox[{"r", " ", 
+            RowBox[{
+             SuperscriptBox["\[Eta]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}]}], 
+           RowBox[{"2", " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]], "0", "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}]},
+     {
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", "0", 
+          FractionBox[
+           RowBox[{"r", " ", 
+            SuperscriptBox[
+             RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+            RowBox[{
+             SuperscriptBox["\[Xi]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}]}], 
+           RowBox[{"2", " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]], "0"},
+         {"0", "0", "0", "0"},
+         {
+          RowBox[{"-", 
+           FractionBox[
+            RowBox[{"r", " ", 
+             SuperscriptBox[
+              RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+             RowBox[{
+              SuperscriptBox["\[Xi]", "\[Prime]",
+               MultilineFunction->None], "[", "r", "]"}]}], 
+            RowBox[{"2", " ", 
+             RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], "0", "0", "0"},
+         {"0", "0", "0", "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", "0", "0", "0"},
+         {"0", "0", 
+          RowBox[{
+           RowBox[{"-", 
+            SuperscriptBox["r", "2"]}], " ", 
+           SuperscriptBox[
+            RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             SuperscriptBox[
+              RowBox[{"Cot", "[", "\[Theta]", "]"}], "2"], "-", 
+             SuperscriptBox[
+              RowBox[{"Csc", "[", "\[Theta]", "]"}], "2"], "+", 
+             FractionBox["1", 
+              RowBox[{"\[Xi]", "[", "r", "]"}]]}], ")"}]}], "0"},
+         {"0", 
+          RowBox[{
+           RowBox[{"-", 
+            SuperscriptBox["r", "2"]}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             SuperscriptBox[
+              RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], "-", 
+             FractionBox[
+              SuperscriptBox[
+               RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], 
+              RowBox[{"\[Xi]", "[", "r", "]"}]]}], ")"}]}], "0", "0"},
+         {"0", "0", "0", "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", 
+          RowBox[{"-", 
+           FractionBox[
+            RowBox[{"r", " ", 
+             SuperscriptBox[
+              RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+             RowBox[{
+              SuperscriptBox["\[Eta]", "\[Prime]",
+               MultilineFunction->None], "[", "r", "]"}]}], 
+            RowBox[{"2", " ", 
+             RowBox[{"\[Xi]", "[", "r", "]"}]}]]}]},
+         {"0", "0", 
+          FractionBox[
+           RowBox[{"r", " ", 
+            SuperscriptBox[
+             RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+            RowBox[{
+             SuperscriptBox["\[Eta]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}]}], 
+           RowBox[{"2", " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]], "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}]},
+     {
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", "0", "0", 
+          RowBox[{
+           RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", 
+              FractionBox[
+               SuperscriptBox[
+                RowBox[{
+                 SuperscriptBox["\[Eta]", "\[Prime]",
+                  MultilineFunction->None], "[", "r", "]"}], "2"], 
+               RowBox[{"4", " ", 
+                SuperscriptBox[
+                 RowBox[{"\[Eta]", "[", "r", "]"}], "2"]}]]}], "-", 
+             FractionBox[
+              RowBox[{
+               RowBox[{
+                SuperscriptBox["\[Eta]", "\[Prime]",
+                 MultilineFunction->None], "[", "r", "]"}], " ", 
+               RowBox[{
+                SuperscriptBox["\[Xi]", "\[Prime]",
+                 MultilineFunction->None], "[", "r", "]"}]}], 
+              RowBox[{"4", " ", 
+               RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+               RowBox[{"\[Xi]", "[", "r", "]"}]}]], "+", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["\[Eta]", "\[Prime]\[Prime]",
+                MultilineFunction->None], "[", "r", "]"}], 
+              RowBox[{"2", " ", 
+               RowBox[{"\[Eta]", "[", "r", "]"}]}]]}], ")"}]}]},
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"},
+         {
+          RowBox[{
+           RowBox[{"-", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", 
+              FractionBox[
+               SuperscriptBox[
+                RowBox[{
+                 SuperscriptBox["\[Eta]", "\[Prime]",
+                  MultilineFunction->None], "[", "r", "]"}], "2"], 
+               RowBox[{"4", " ", 
+                RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+                RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], "-", 
+             FractionBox[
+              RowBox[{
+               RowBox[{
+                SuperscriptBox["\[Eta]", "\[Prime]",
+                 MultilineFunction->None], "[", "r", "]"}], " ", 
+               RowBox[{
+                SuperscriptBox["\[Xi]", "\[Prime]",
+                 MultilineFunction->None], "[", "r", "]"}]}], 
+              RowBox[{"4", " ", 
+               SuperscriptBox[
+                RowBox[{"\[Xi]", "[", "r", "]"}], "2"]}]], "+", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["\[Eta]", "\[Prime]\[Prime]",
+                MultilineFunction->None], "[", "r", "]"}], 
+              RowBox[{"2", " ", 
+               RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], ")"}]}], "0", "0", "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", 
+          FractionBox[
+           RowBox[{"r", " ", 
+            RowBox[{
+             SuperscriptBox["\[Eta]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}]}], 
+           RowBox[{"2", " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]]},
+         {"0", "0", "0", "0"},
+         {"0", 
+          RowBox[{"-", 
+           FractionBox[
+            RowBox[{"r", " ", 
+             RowBox[{
+              SuperscriptBox["\[Eta]", "\[Prime]",
+               MultilineFunction->None], "[", "r", "]"}]}], 
+            RowBox[{"2", " ", 
+             RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], "0", "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", 
+          FractionBox[
+           RowBox[{"r", " ", 
+            SuperscriptBox[
+             RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+            RowBox[{
+             SuperscriptBox["\[Eta]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}]}], 
+           RowBox[{"2", " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]]},
+         {"0", "0", 
+          RowBox[{"-", 
+           FractionBox[
+            RowBox[{"r", " ", 
+             SuperscriptBox[
+              RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+             RowBox[{
+              SuperscriptBox["\[Eta]", "\[Prime]",
+               MultilineFunction->None], "[", "r", "]"}]}], 
+            RowBox[{"2", " ", 
+             RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], 
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"},
+         {"0", "0", "0", "0"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.710532082381344*^9, 
+  3.710532092410141*^9}},ExpressionUUID->"92b95fb8-b117-461f-b508-\
+f096c630a780"]
+}, Open  ]],
+
+Cell["Ricci tensor", "Text",
+ CellChangeTimes->{{3.710532110328788*^9, 
+  3.710532111680232*^9}},ExpressionUUID->"463fb6b1-5110-41af-aa37-\
+4d540d155b33"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"\[ScriptCapitalR]", " ", "=", " ", 
+  RowBox[{"Array", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Sum", "[", 
+      RowBox[{
+       RowBox[{"-", 
+        RowBox[{"R", "[", 
+         RowBox[{"[", 
+          RowBox[{"i", ",", "#1", ",", "#2", ",", "i"}], "]"}], "]"}]}], ",", 
+       
+       RowBox[{"{", 
+        RowBox[{"i", ",", "4"}], "}"}]}], "]"}], "&"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"4", ",", "4"}], "}"}]}], "]"}]}], "\n", 
+ RowBox[{"MatrixForm", "[", "\[ScriptCapitalR]", "]"}]}], "Code",
+ CellChangeTimes->{{3.710532121575644*^9, 
+  3.710532216318735*^9}},ExpressionUUID->"52910a45-3dea-4fab-9d9f-\
+81c0acb2d805"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      FractionBox[
+       SuperscriptBox[
+        RowBox[{
+         SuperscriptBox["\[Eta]", "\[Prime]",
+          MultilineFunction->None], "[", "r", "]"}], "2"], 
+       RowBox[{"4", " ", 
+        SuperscriptBox[
+         RowBox[{"\[Eta]", "[", "r", "]"}], "2"]}]], "+", 
+      FractionBox[
+       RowBox[{
+        SuperscriptBox["\[Xi]", "\[Prime]",
+         MultilineFunction->None], "[", "r", "]"}], 
+       RowBox[{"r", " ", 
+        RowBox[{"\[Xi]", "[", "r", "]"}]}]], "+", 
+      FractionBox[
+       RowBox[{
+        RowBox[{
+         SuperscriptBox["\[Eta]", "\[Prime]",
+          MultilineFunction->None], "[", "r", "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["\[Xi]", "\[Prime]",
+          MultilineFunction->None], "[", "r", "]"}]}], 
+       RowBox[{"4", " ", 
+        RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+        RowBox[{"\[Xi]", "[", "r", "]"}]}]], "-", 
+      FractionBox[
+       RowBox[{
+        SuperscriptBox["\[Eta]", "\[Prime]\[Prime]",
+         MultilineFunction->None], "[", "r", "]"}], 
+       RowBox[{"2", " ", 
+        RowBox[{"\[Eta]", "[", "r", "]"}]}]]}], ",", "0", ",", "0", ",", 
+     "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", 
+     RowBox[{
+      RowBox[{"-", 
+       SuperscriptBox[
+        RowBox[{"Cot", "[", "\[Theta]", "]"}], "2"]}], "+", 
+      SuperscriptBox[
+       RowBox[{"Csc", "[", "\[Theta]", "]"}], "2"], "-", 
+      FractionBox["1", 
+       RowBox[{"\[Xi]", "[", "r", "]"}]], "-", 
+      FractionBox[
+       RowBox[{"r", " ", 
+        RowBox[{
+         SuperscriptBox["\[Eta]", "\[Prime]",
+          MultilineFunction->None], "[", "r", "]"}]}], 
+       RowBox[{"2", " ", 
+        RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+        RowBox[{"\[Xi]", "[", "r", "]"}]}]], "+", 
+      FractionBox[
+       RowBox[{"r", " ", 
+        RowBox[{
+         SuperscriptBox["\[Xi]", "\[Prime]",
+          MultilineFunction->None], "[", "r", "]"}]}], 
+       RowBox[{"2", " ", 
+        SuperscriptBox[
+         RowBox[{"\[Xi]", "[", "r", "]"}], "2"]}]]}], ",", "0", ",", "0"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "0", ",", 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], "-", 
+      FractionBox[
+       SuperscriptBox[
+        RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], 
+       RowBox[{"\[Xi]", "[", "r", "]"}]], "-", 
+      FractionBox[
+       RowBox[{"r", " ", 
+        SuperscriptBox[
+         RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+        RowBox[{
+         SuperscriptBox["\[Eta]", "\[Prime]",
+          MultilineFunction->None], "[", "r", "]"}]}], 
+       RowBox[{"2", " ", 
+        RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+        RowBox[{"\[Xi]", "[", "r", "]"}]}]], "+", 
+      FractionBox[
+       RowBox[{"r", " ", 
+        SuperscriptBox[
+         RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+        RowBox[{
+         SuperscriptBox["\[Xi]", "\[Prime]",
+          MultilineFunction->None], "[", "r", "]"}]}], 
+       RowBox[{"2", " ", 
+        SuperscriptBox[
+         RowBox[{"\[Xi]", "[", "r", "]"}], "2"]}]]}], ",", "0"}], "}"}], ",", 
+   
+   RowBox[{"{", 
+    RowBox[{"0", ",", "0", ",", "0", ",", 
+     RowBox[{
+      FractionBox[
+       RowBox[{
+        SuperscriptBox["\[Eta]", "\[Prime]",
+         MultilineFunction->None], "[", "r", "]"}], 
+       RowBox[{"r", " ", 
+        RowBox[{"\[Xi]", "[", "r", "]"}]}]], "-", 
+      FractionBox[
+       SuperscriptBox[
+        RowBox[{
+         SuperscriptBox["\[Eta]", "\[Prime]",
+          MultilineFunction->None], "[", "r", "]"}], "2"], 
+       RowBox[{"4", " ", 
+        RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+        RowBox[{"\[Xi]", "[", "r", "]"}]}]], "-", 
+      FractionBox[
+       RowBox[{
+        RowBox[{
+         SuperscriptBox["\[Eta]", "\[Prime]",
+          MultilineFunction->None], "[", "r", "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["\[Xi]", "\[Prime]",
+          MultilineFunction->None], "[", "r", "]"}]}], 
+       RowBox[{"4", " ", 
+        SuperscriptBox[
+         RowBox[{"\[Xi]", "[", "r", "]"}], "2"]}]], "+", 
+      FractionBox[
+       RowBox[{
+        SuperscriptBox["\[Eta]", "\[Prime]\[Prime]",
+         MultilineFunction->None], "[", "r", "]"}], 
+       RowBox[{"2", " ", 
+        RowBox[{"\[Xi]", "[", "r", "]"}]}]]}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.7105321721788473`*^9, 3.7105321780382032`*^9}, 
+   3.710532217624395*^9},ExpressionUUID->"0b499d0a-c08c-4ed9-a301-\
+d2260d4de530"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {
+      RowBox[{
+       FractionBox[
+        SuperscriptBox[
+         RowBox[{
+          SuperscriptBox["\[Eta]", "\[Prime]",
+           MultilineFunction->None], "[", "r", "]"}], "2"], 
+        RowBox[{"4", " ", 
+         SuperscriptBox[
+          RowBox[{"\[Eta]", "[", "r", "]"}], "2"]}]], "+", 
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["\[Xi]", "\[Prime]",
+          MultilineFunction->None], "[", "r", "]"}], 
+        RowBox[{"r", " ", 
+         RowBox[{"\[Xi]", "[", "r", "]"}]}]], "+", 
+       FractionBox[
+        RowBox[{
+         RowBox[{
+          SuperscriptBox["\[Eta]", "\[Prime]",
+           MultilineFunction->None], "[", "r", "]"}], " ", 
+         RowBox[{
+          SuperscriptBox["\[Xi]", "\[Prime]",
+           MultilineFunction->None], "[", "r", "]"}]}], 
+        RowBox[{"4", " ", 
+         RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+         RowBox[{"\[Xi]", "[", "r", "]"}]}]], "-", 
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["\[Eta]", "\[Prime]\[Prime]",
+          MultilineFunction->None], "[", "r", "]"}], 
+        RowBox[{"2", " ", 
+         RowBox[{"\[Eta]", "[", "r", "]"}]}]]}], "0", "0", "0"},
+     {"0", 
+      RowBox[{
+       RowBox[{"-", 
+        SuperscriptBox[
+         RowBox[{"Cot", "[", "\[Theta]", "]"}], "2"]}], "+", 
+       SuperscriptBox[
+        RowBox[{"Csc", "[", "\[Theta]", "]"}], "2"], "-", 
+       FractionBox["1", 
+        RowBox[{"\[Xi]", "[", "r", "]"}]], "-", 
+       FractionBox[
+        RowBox[{"r", " ", 
+         RowBox[{
+          SuperscriptBox["\[Eta]", "\[Prime]",
+           MultilineFunction->None], "[", "r", "]"}]}], 
+        RowBox[{"2", " ", 
+         RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+         RowBox[{"\[Xi]", "[", "r", "]"}]}]], "+", 
+       FractionBox[
+        RowBox[{"r", " ", 
+         RowBox[{
+          SuperscriptBox["\[Xi]", "\[Prime]",
+           MultilineFunction->None], "[", "r", "]"}]}], 
+        RowBox[{"2", " ", 
+         SuperscriptBox[
+          RowBox[{"\[Xi]", "[", "r", "]"}], "2"]}]]}], "0", "0"},
+     {"0", "0", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], "-", 
+       FractionBox[
+        SuperscriptBox[
+         RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], 
+        RowBox[{"\[Xi]", "[", "r", "]"}]], "-", 
+       FractionBox[
+        RowBox[{"r", " ", 
+         SuperscriptBox[
+          RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+         RowBox[{
+          SuperscriptBox["\[Eta]", "\[Prime]",
+           MultilineFunction->None], "[", "r", "]"}]}], 
+        RowBox[{"2", " ", 
+         RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+         RowBox[{"\[Xi]", "[", "r", "]"}]}]], "+", 
+       FractionBox[
+        RowBox[{"r", " ", 
+         SuperscriptBox[
+          RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+         RowBox[{
+          SuperscriptBox["\[Xi]", "\[Prime]",
+           MultilineFunction->None], "[", "r", "]"}]}], 
+        RowBox[{"2", " ", 
+         SuperscriptBox[
+          RowBox[{"\[Xi]", "[", "r", "]"}], "2"]}]]}], "0"},
+     {"0", "0", "0", 
+      RowBox[{
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["\[Eta]", "\[Prime]",
+          MultilineFunction->None], "[", "r", "]"}], 
+        RowBox[{"r", " ", 
+         RowBox[{"\[Xi]", "[", "r", "]"}]}]], "-", 
+       FractionBox[
+        SuperscriptBox[
+         RowBox[{
+          SuperscriptBox["\[Eta]", "\[Prime]",
+           MultilineFunction->None], "[", "r", "]"}], "2"], 
+        RowBox[{"4", " ", 
+         RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+         RowBox[{"\[Xi]", "[", "r", "]"}]}]], "-", 
+       FractionBox[
+        RowBox[{
+         RowBox[{
+          SuperscriptBox["\[Eta]", "\[Prime]",
+           MultilineFunction->None], "[", "r", "]"}], " ", 
+         RowBox[{
+          SuperscriptBox["\[Xi]", "\[Prime]",
+           MultilineFunction->None], "[", "r", "]"}]}], 
+        RowBox[{"4", " ", 
+         SuperscriptBox[
+          RowBox[{"\[Xi]", "[", "r", "]"}], "2"]}]], "+", 
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["\[Eta]", "\[Prime]\[Prime]",
+          MultilineFunction->None], "[", "r", "]"}], 
+        RowBox[{"2", " ", 
+         RowBox[{"\[Xi]", "[", "r", "]"}]}]]}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.7105321721788473`*^9, 3.7105321780382032`*^9}, 
+   3.710532217644445*^9},ExpressionUUID->"7cd76f6e-5de5-43f9-9ffa-\
+688ddb280e3a"]
+}, Open  ]],
+
+Cell["Curvature invariant", "Text",
+ CellChangeTimes->{{3.710532190488207*^9, 
+  3.7105321937583714`*^9}},ExpressionUUID->"6c6e4a20-104d-4c3b-aec2-\
+d261ed55aa5b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Simplify", "[", 
+  RowBox[{"Sum", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"g", "[", 
+      RowBox[{"[", 
+       RowBox[{"i", ",", "j"}], "]"}], "]"}], 
+     RowBox[{"\[ScriptCapitalR]", "[", 
+      RowBox[{"[", 
+       RowBox[{"i", ",", "j"}], "]"}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "4"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "4"}], "}"}]}], "]"}], "]"}]], "Code",
+ CellChangeTimes->{{3.710532197670924*^9, 
+  3.710532238984045*^9}},ExpressionUUID->"16f053d4-e238-411e-b6e2-\
+b210bd7c981c"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", 
+   RowBox[{"8", " ", "r", " ", 
+    SuperscriptBox[
+     RowBox[{"\[Eta]", "[", "r", "]"}], "2"], " ", 
+    SuperscriptBox[
+     RowBox[{"\[Xi]", "[", "r", "]"}], "2"]}]], 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "2"}], " ", "r", " ", 
+     SuperscriptBox[
+      RowBox[{"\[Xi]", "[", "r", "]"}], "3"], " ", 
+     SuperscriptBox[
+      RowBox[{
+       SuperscriptBox["\[Eta]", "\[Prime]",
+        MultilineFunction->None], "[", "r", "]"}], "2"]}], "-", 
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"\[Eta]", "[", "r", "]"}], "2"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"\[Xi]", "[", "r", "]"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "8"}], " ", 
+           SuperscriptBox["r", "3"], " ", 
+           RowBox[{"(", 
+            RowBox[{"1", "+", 
+             SuperscriptBox[
+              RowBox[{"Sin", "[", "\[Theta]", "]"}], "4"]}], ")"}]}], "+", 
+          RowBox[{"2", " ", "r", " ", 
+           SuperscriptBox[
+            RowBox[{
+             SuperscriptBox["\[Eta]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}], "2"]}]}], ")"}]}], 
+       "+", 
+       RowBox[{"4", " ", 
+        SuperscriptBox["r", "4"], " ", 
+        RowBox[{"(", 
+         RowBox[{"1", "+", 
+          SuperscriptBox[
+           RowBox[{"Sin", "[", "\[Theta]", "]"}], "4"]}], ")"}], " ", 
+        RowBox[{
+         SuperscriptBox["\[Xi]", "\[Prime]",
+          MultilineFunction->None], "[", "r", "]"}]}], "+", 
+       RowBox[{
+        SuperscriptBox[
+         RowBox[{"\[Xi]", "[", "r", "]"}], "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           SuperscriptBox["r", "3"], " ", 
+           RowBox[{"(", 
+            RowBox[{"11", "-", 
+             RowBox[{"4", " ", 
+              RowBox[{"Cos", "[", 
+               RowBox[{"2", " ", "\[Theta]"}], "]"}]}], "+", 
+             RowBox[{"Cos", "[", 
+              RowBox[{"4", " ", "\[Theta]"}], "]"}]}], ")"}]}], "+", 
+          RowBox[{"8", " ", 
+           RowBox[{
+            SuperscriptBox["\[Xi]", "\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}]}]}], ")"}]}]}], 
+      ")"}]}], "+", 
+    RowBox[{"2", " ", "r", " ", 
+     RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+     RowBox[{"\[Xi]", "[", "r", "]"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         SuperscriptBox["\[Eta]", "\[Prime]",
+          MultilineFunction->None], "[", "r", "]"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"2", " ", 
+           SuperscriptBox["r", "3"], " ", 
+           RowBox[{"(", 
+            RowBox[{"1", "+", 
+             SuperscriptBox[
+              RowBox[{"Sin", "[", "\[Theta]", "]"}], "4"]}], ")"}]}], "-", 
+          RowBox[{
+           RowBox[{"\[Xi]", "[", "r", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[Xi]", "\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}]}]}], ")"}]}], "+", 
+       RowBox[{"2", " ", 
+        SuperscriptBox[
+         RowBox[{"\[Xi]", "[", "r", "]"}], "2"], " ", 
+        RowBox[{
+         SuperscriptBox["\[Eta]", "\[Prime]\[Prime]",
+          MultilineFunction->None], "[", "r", "]"}]}]}], ")"}]}], "+", 
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"\[Eta]", "[", "r", "]"}], "3"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "2"}], " ", "r", " ", 
+        RowBox[{
+         SuperscriptBox["\[Eta]", "\[Prime]",
+          MultilineFunction->None], "[", "r", "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["\[Xi]", "\[Prime]",
+          MultilineFunction->None], "[", "r", "]"}]}], "+", 
+       RowBox[{"4", " ", 
+        RowBox[{"\[Xi]", "[", "r", "]"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"2", " ", 
+           RowBox[{
+            SuperscriptBox["\[Eta]", "\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}]}], "+", 
+          RowBox[{"r", " ", 
+           RowBox[{
+            SuperscriptBox["\[Eta]", "\[Prime]\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}]}]}], ")"}]}]}], 
+      ")"}]}]}], ")"}]}]], "Output",
+ CellChangeTimes->{{3.710532232256329*^9, 
+  3.710532239993011*^9}},ExpressionUUID->"008bb94d-c394-45f7-be05-\
+e83dc38be70f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Array", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"G", "[", 
+        RowBox[{"[", 
+         RowBox[{"\[Gamma]", ",", "#2"}], "]"}], "]"}], 
+       RowBox[{"\[ScriptCapitalR]", "[", 
+        RowBox[{"[", 
+         RowBox[{"#1", ",", "\[Gamma]"}], "]"}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[Gamma]", ",", "4"}], "}"}]}], "]"}], "&"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "4"}], "}"}]}], "]"}], "\n", 
+ RowBox[{"MatrixForm", "[", "%", "]"}]}], "Code",
+ CellChangeTimes->{{3.710532263189693*^9, 
+  3.7105323696144123`*^9}},ExpressionUUID->"3422578e-4b8f-49f0-8137-\
+417375f71b4b"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{
+        FractionBox[
+         SuperscriptBox[
+          RowBox[{
+           SuperscriptBox["\[Eta]", "\[Prime]",
+            MultilineFunction->None], "[", "r", "]"}], "2"], 
+         RowBox[{"4", " ", 
+          SuperscriptBox[
+           RowBox[{"\[Eta]", "[", "r", "]"}], "2"]}]], "+", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["\[Xi]", "\[Prime]",
+           MultilineFunction->None], "[", "r", "]"}], 
+         RowBox[{"r", " ", 
+          RowBox[{"\[Xi]", "[", "r", "]"}]}]], "+", 
+        FractionBox[
+         RowBox[{
+          RowBox[{
+           SuperscriptBox["\[Eta]", "\[Prime]",
+            MultilineFunction->None], "[", "r", "]"}], " ", 
+          RowBox[{
+           SuperscriptBox["\[Xi]", "\[Prime]",
+            MultilineFunction->None], "[", "r", "]"}]}], 
+         RowBox[{"4", " ", 
+          RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+          RowBox[{"\[Xi]", "[", "r", "]"}]}]], "-", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["\[Eta]", "\[Prime]\[Prime]",
+           MultilineFunction->None], "[", "r", "]"}], 
+         RowBox[{"2", " ", 
+          RowBox[{"\[Eta]", "[", "r", "]"}]}]]}], 
+       RowBox[{"\[Xi]", "[", "r", "]"}]]}], ",", "0", ",", "0", ",", "0"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"-", 
+         SuperscriptBox[
+          RowBox[{"Cot", "[", "\[Theta]", "]"}], "2"]}], "+", 
+        SuperscriptBox[
+         RowBox[{"Csc", "[", "\[Theta]", "]"}], "2"], "-", 
+        FractionBox["1", 
+         RowBox[{"\[Xi]", "[", "r", "]"}]], "-", 
+        FractionBox[
+         RowBox[{"r", " ", 
+          RowBox[{
+           SuperscriptBox["\[Eta]", "\[Prime]",
+            MultilineFunction->None], "[", "r", "]"}]}], 
+         RowBox[{"2", " ", 
+          RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+          RowBox[{"\[Xi]", "[", "r", "]"}]}]], "+", 
+        FractionBox[
+         RowBox[{"r", " ", 
+          RowBox[{
+           SuperscriptBox["\[Xi]", "\[Prime]",
+            MultilineFunction->None], "[", "r", "]"}]}], 
+         RowBox[{"2", " ", 
+          SuperscriptBox[
+           RowBox[{"\[Xi]", "[", "r", "]"}], "2"]}]]}], 
+       SuperscriptBox["r", "2"]]}], ",", "0", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "0", ",", 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{
+        SuperscriptBox[
+         RowBox[{"Csc", "[", "\[Theta]", "]"}], "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], "-", 
+          FractionBox[
+           SuperscriptBox[
+            RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], 
+           RowBox[{"\[Xi]", "[", "r", "]"}]], "-", 
+          FractionBox[
+           RowBox[{"r", " ", 
+            SuperscriptBox[
+             RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+            RowBox[{
+             SuperscriptBox["\[Eta]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}]}], 
+           RowBox[{"2", " ", 
+            RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+            RowBox[{"\[Xi]", "[", "r", "]"}]}]], "+", 
+          FractionBox[
+           RowBox[{"r", " ", 
+            SuperscriptBox[
+             RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+            RowBox[{
+             SuperscriptBox["\[Xi]", "\[Prime]",
+              MultilineFunction->None], "[", "r", "]"}]}], 
+           RowBox[{"2", " ", 
+            SuperscriptBox[
+             RowBox[{"\[Xi]", "[", "r", "]"}], "2"]}]]}], ")"}]}], 
+       SuperscriptBox["r", "2"]]}], ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "0", ",", "0", ",", 
+     FractionBox[
+      RowBox[{
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["\[Eta]", "\[Prime]",
+          MultilineFunction->None], "[", "r", "]"}], 
+        RowBox[{"r", " ", 
+         RowBox[{"\[Xi]", "[", "r", "]"}]}]], "-", 
+       FractionBox[
+        SuperscriptBox[
+         RowBox[{
+          SuperscriptBox["\[Eta]", "\[Prime]",
+           MultilineFunction->None], "[", "r", "]"}], "2"], 
+        RowBox[{"4", " ", 
+         RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+         RowBox[{"\[Xi]", "[", "r", "]"}]}]], "-", 
+       FractionBox[
+        RowBox[{
+         RowBox[{
+          SuperscriptBox["\[Eta]", "\[Prime]",
+           MultilineFunction->None], "[", "r", "]"}], " ", 
+         RowBox[{
+          SuperscriptBox["\[Xi]", "\[Prime]",
+           MultilineFunction->None], "[", "r", "]"}]}], 
+        RowBox[{"4", " ", 
+         SuperscriptBox[
+          RowBox[{"\[Xi]", "[", "r", "]"}], "2"]}]], "+", 
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["\[Eta]", "\[Prime]\[Prime]",
+          MultilineFunction->None], "[", "r", "]"}], 
+        RowBox[{"2", " ", 
+         RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], 
+      RowBox[{"\[Eta]", "[", "r", "]"}]]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.710532363843033*^9, 
+  3.710532369903818*^9}},ExpressionUUID->"d2e437ba-616d-4609-bfbd-\
+6e16d57c48b6"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{
+         FractionBox[
+          SuperscriptBox[
+           RowBox[{
+            SuperscriptBox["\[Eta]", "\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}], "2"], 
+          RowBox[{"4", " ", 
+           SuperscriptBox[
+            RowBox[{"\[Eta]", "[", "r", "]"}], "2"]}]], "+", 
+         FractionBox[
+          RowBox[{
+           SuperscriptBox["\[Xi]", "\[Prime]",
+            MultilineFunction->None], "[", "r", "]"}], 
+          RowBox[{"r", " ", 
+           RowBox[{"\[Xi]", "[", "r", "]"}]}]], "+", 
+         FractionBox[
+          RowBox[{
+           RowBox[{
+            SuperscriptBox["\[Eta]", "\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}], " ", 
+           RowBox[{
+            SuperscriptBox["\[Xi]", "\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}]}], 
+          RowBox[{"4", " ", 
+           RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+           RowBox[{"\[Xi]", "[", "r", "]"}]}]], "-", 
+         FractionBox[
+          RowBox[{
+           SuperscriptBox["\[Eta]", "\[Prime]\[Prime]",
+            MultilineFunction->None], "[", "r", "]"}], 
+          RowBox[{"2", " ", 
+           RowBox[{"\[Eta]", "[", "r", "]"}]}]]}], 
+        RowBox[{"\[Xi]", "[", "r", "]"}]]}], "0", "0", "0"},
+     {"0", 
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{
+         RowBox[{"-", 
+          SuperscriptBox[
+           RowBox[{"Cot", "[", "\[Theta]", "]"}], "2"]}], "+", 
+         SuperscriptBox[
+          RowBox[{"Csc", "[", "\[Theta]", "]"}], "2"], "-", 
+         FractionBox["1", 
+          RowBox[{"\[Xi]", "[", "r", "]"}]], "-", 
+         FractionBox[
+          RowBox[{"r", " ", 
+           RowBox[{
+            SuperscriptBox["\[Eta]", "\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}]}], 
+          RowBox[{"2", " ", 
+           RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+           RowBox[{"\[Xi]", "[", "r", "]"}]}]], "+", 
+         FractionBox[
+          RowBox[{"r", " ", 
+           RowBox[{
+            SuperscriptBox["\[Xi]", "\[Prime]",
+             MultilineFunction->None], "[", "r", "]"}]}], 
+          RowBox[{"2", " ", 
+           SuperscriptBox[
+            RowBox[{"\[Xi]", "[", "r", "]"}], "2"]}]]}], 
+        SuperscriptBox["r", "2"]]}], "0", "0"},
+     {"0", "0", 
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{
+         SuperscriptBox[
+          RowBox[{"Csc", "[", "\[Theta]", "]"}], "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SuperscriptBox[
+            RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], "-", 
+           FractionBox[
+            SuperscriptBox[
+             RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], 
+            RowBox[{"\[Xi]", "[", "r", "]"}]], "-", 
+           FractionBox[
+            RowBox[{"r", " ", 
+             SuperscriptBox[
+              RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+             RowBox[{
+              SuperscriptBox["\[Eta]", "\[Prime]",
+               MultilineFunction->None], "[", "r", "]"}]}], 
+            RowBox[{"2", " ", 
+             RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+             RowBox[{"\[Xi]", "[", "r", "]"}]}]], "+", 
+           FractionBox[
+            RowBox[{"r", " ", 
+             SuperscriptBox[
+              RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"], " ", 
+             RowBox[{
+              SuperscriptBox["\[Xi]", "\[Prime]",
+               MultilineFunction->None], "[", "r", "]"}]}], 
+            RowBox[{"2", " ", 
+             SuperscriptBox[
+              RowBox[{"\[Xi]", "[", "r", "]"}], "2"]}]]}], ")"}]}], 
+        SuperscriptBox["r", "2"]]}], "0"},
+     {"0", "0", "0", 
+      FractionBox[
+       RowBox[{
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["\[Eta]", "\[Prime]",
+           MultilineFunction->None], "[", "r", "]"}], 
+         RowBox[{"r", " ", 
+          RowBox[{"\[Xi]", "[", "r", "]"}]}]], "-", 
+        FractionBox[
+         SuperscriptBox[
+          RowBox[{
+           SuperscriptBox["\[Eta]", "\[Prime]",
+            MultilineFunction->None], "[", "r", "]"}], "2"], 
+         RowBox[{"4", " ", 
+          RowBox[{"\[Eta]", "[", "r", "]"}], " ", 
+          RowBox[{"\[Xi]", "[", "r", "]"}]}]], "-", 
+        FractionBox[
+         RowBox[{
+          RowBox[{
+           SuperscriptBox["\[Eta]", "\[Prime]",
+            MultilineFunction->None], "[", "r", "]"}], " ", 
+          RowBox[{
+           SuperscriptBox["\[Xi]", "\[Prime]",
+            MultilineFunction->None], "[", "r", "]"}]}], 
+         RowBox[{"4", " ", 
+          SuperscriptBox[
+           RowBox[{"\[Xi]", "[", "r", "]"}], "2"]}]], "+", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["\[Eta]", "\[Prime]\[Prime]",
+           MultilineFunction->None], "[", "r", "]"}], 
+         RowBox[{"2", " ", 
+          RowBox[{"\[Xi]", "[", "r", "]"}]}]]}], 
+       RowBox[{"\[Eta]", "[", "r", "]"}]]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.710532363843033*^9, 
+  3.710532369915009*^9}},ExpressionUUID->"f9107c56-55f4-4dbc-a3e3-\
+c836e26d7eee"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1280, 755},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.1 for Mac OS X x86 (32-bit, 64-bit Kernel) (April 27, \
+2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 216, 5, 92, "Title", "ExpressionUUID" -> \
+"b8f4a52f-3f72-4ec0-9578-f22e2bddbde4"],
+Cell[CellGroupData[{
+Cell[821, 31, 149, 3, 65, "Chapter", "ExpressionUUID" -> \
+"cd321ee4-c847-4f02-8fd7-006ca98f7074"],
+Cell[973, 36, 201, 3, 30, "Text", "ExpressionUUID" -> \
+"f80810fc-e3eb-435b-8952-db323166422a"],
+Cell[1177, 41, 759, 22, 72, "Code", "ExpressionUUID" -> \
+"f9b9e4e3-9f82-41dc-9da6-5052af9533b5"],
+Cell[1939, 65, 166, 3, 30, "Text", "ExpressionUUID" -> \
+"39fd9998-0cd7-4186-b4fd-8381f2e345c9"],
+Cell[CellGroupData[{
+Cell[2130, 72, 657, 19, 72, "Code", "ExpressionUUID" -> \
+"aad98592-d971-4283-951b-60cf8fd9097b"],
+Cell[2790, 93, 1107, 32, 100, "Output", "ExpressionUUID" -> \
+"b13fed34-014d-429c-bcdb-ca6b0715adeb"]
+}, Open  ]],
+Cell[3912, 128, 170, 3, 30, "Text", "ExpressionUUID" -> \
+"67aeefa5-4b27-4dee-9f77-c2454bea461e"],
+Cell[CellGroupData[{
+Cell[4107, 135, 299, 8, 72, "Code", "ExpressionUUID" -> \
+"be9f8071-5740-49fd-b850-e70405313759"],
+Cell[4409, 145, 1162, 35, 134, "Output", "ExpressionUUID" -> \
+"3faba322-b224-4df6-9cde-fe5fb5edbb26"]
+}, Open  ]],
+Cell[5586, 183, 179, 3, 30, "Text", "ExpressionUUID" -> \
+"f3d77061-6374-48a6-a72a-71c405426cdf"],
+Cell[CellGroupData[{
+Cell[5790, 190, 1545, 44, 72, "Code", "ExpressionUUID" -> \
+"c22581fb-3d15-4831-b0bf-3394f9465a7f"],
+Cell[7338, 236, 3128, 92, 97, "Output", "ExpressionUUID" -> \
+"7b0829ee-62f7-47cd-ae36-d31bb43a9e7f"],
+Cell[10469, 330, 12555, 353, 350, "Output", "ExpressionUUID" -> \
+"0f4ff42d-605e-439c-a923-71e287f158c8"]
+}, Open  ]],
+Cell[23039, 686, 144, 3, 30, "Text", "ExpressionUUID" -> \
+"14aa099d-330c-478d-9250-2281a4c04feb"],
+Cell[CellGroupData[{
+Cell[23208, 693, 1708, 46, 72, "Code", "ExpressionUUID" -> \
+"2357466c-727c-4c2c-b2e5-4b2d47c7a7b5"],
+Cell[24919, 741, 16698, 452, 535, "Output", "ExpressionUUID" -> \
+"0a97f1c6-3a3d-4092-b414-7be831bf5ca6"],
+Cell[41620, 1195, 21335, 558, 420, "Output", "ExpressionUUID" -> \
+"22c7a6f0-a96f-403f-9fa5-a60b3cab80c5"]
+}, Open  ]],
+Cell[62970, 1756, 170, 3, 30, "Text", "ExpressionUUID" -> \
+"7ae95e70-0565-48dc-8e9e-8838e0319ad9"],
+Cell[CellGroupData[{
+Cell[63165, 1763, 695, 21, 72, "Code", "ExpressionUUID" -> \
+"d1791b20-2e5b-4979-90e1-162c3569dac9"],
+Cell[63863, 1786, 18316, 496, 542, "Output", "ExpressionUUID" -> \
+"f780abf9-8f1f-4dbe-b2fb-242fc40c7bce"],
+Cell[82182, 2284, 22975, 600, 420, "Output", "ExpressionUUID" -> \
+"92b95fb8-b117-461f-b508-f096c630a780"]
+}, Open  ]],
+Cell[105172, 2887, 154, 3, 30, "Text", "ExpressionUUID" -> \
+"463fb6b1-5110-41af-aa37-4d540d155b33"],
+Cell[CellGroupData[{
+Cell[105351, 2894, 657, 19, 72, "Code", "ExpressionUUID" -> \
+"52910a45-3dea-4fab-9d9f-81c0acb2d805"],
+Cell[106011, 2915, 4536, 131, 102, "Output", "ExpressionUUID" -> \
+"0b499d0a-c08c-4ed9-a301-d2260d4de530"],
+Cell[110550, 3048, 4926, 137, 154, "Output", "ExpressionUUID" -> \
+"7cd76f6e-5de5-43f9-9ffa-688ddb280e3a"]
+}, Open  ]],
+Cell[115491, 3188, 163, 3, 30, "Text", "ExpressionUUID" -> \
+"6c6e4a20-104d-4c3b-aec2-d261ed55aa5b"],
+Cell[CellGroupData[{
+Cell[115679, 3195, 560, 17, 52, "Code", "ExpressionUUID" -> \
+"16f053d4-e238-411e-b6e2-b210bd7c981c"],
+Cell[116242, 3214, 4314, 124, 77, "Output", "ExpressionUUID" -> \
+"008bb94d-c394-45f7-be05-e83dc38be70f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[120593, 3343, 683, 20, 72, "Code", "ExpressionUUID" -> \
+"3422578e-4b8f-49f0-8137-417375f71b4b"],
+Cell[121279, 3365, 5176, 144, 124, "Output", "ExpressionUUID" -> \
+"d2e437ba-616d-4609-bfbd-6e16d57c48b6"],
+Cell[126458, 3511, 5591, 152, 208, "Output", "ExpressionUUID" -> \
+"f9107c56-55f4-4dbc-a3e3-c836e26d7eee"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

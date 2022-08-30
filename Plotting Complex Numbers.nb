@@ -1,0 +1,100 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3011,         92]
+NotebookOptionsPosition[      2696,         77]
+NotebookOutlinePosition[      3052,         93]
+CellTagsIndexPosition[      3009,         90]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"p", " ", "=", " ", 
+    RowBox[{"ListPlot", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Re", "[", "#", "]"}], ",", " ", 
+          RowBox[{"Im", "[", "#", "]"}]}], "}"}], " ", "&"}], " ", "/@", " ", 
+       "data"}], ",", "\n", "   ", 
+      RowBox[{"AxesOrigin", " ", "->", " ", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", " ", "0"}], "}"}]}], ",", "\n", "   ", 
+      RowBox[{"PlotRange", " ", "->", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "1.2"}], ",", " ", "1.2"}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "1.2"}], ",", " ", "1.2"}], "}"}]}], "}"}]}], ",", 
+      "\n", "   ", 
+      RowBox[{"ImagePadding", " ", "->", " ", "40"}], ",", "\n", "   ", 
+      RowBox[{"AspectRatio", " ", "->", " ", "1"}], ",", "\n", "   ", 
+      RowBox[{"Frame", " ", "->", " ", "True"}], ",", "\n", "   ", 
+      RowBox[{"FrameLabel", " ", "->", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"Im", ",", " ", "None"}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"Re", ",", " ", "\"\<complex plane\>\""}], "}"}]}], "}"}]}],
+       ",", "\n", "   ", 
+      RowBox[{"PlotStyle", " ", "->", " ", 
+       RowBox[{"Directive", "[", 
+        RowBox[{"Red", ",", " ", 
+         RowBox[{"PointSize", "[", ".02", "]"}]}], "]"}]}]}], "]"}]}], ";"}], 
+  "\n"}], "\n", 
+ RowBox[{"Show", "[", 
+  RowBox[{"p", ",", " ", 
+   RowBox[{"Graphics", "@", 
+    RowBox[{"Circle", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0", ",", " ", "0"}], "}"}], ",", " ", "1"}], "]"}]}]}], 
+  "]"}]}], "Code",
+ CellChangeTimes->{{3.726275727349925*^9, 3.726275781600182*^9}, {
+  3.7262758133214684`*^9, 3.726275813504958*^9}, {3.726275920373867*^9, 
+  3.7262759208774023`*^9}, {3.7262759881517067`*^9, 3.726275988327669*^9}, {
+  3.726276044474887*^9, 3.726276047938517*^9}, {3.726281525643179*^9, 
+  3.7262815263202467`*^9}},ExpressionUUID->"db0e6b75-a242-4226-8a6d-\
+bf7aab2bf853"]
+},
+WindowSize->{808, 651},
+WindowMargins->{{166, Automatic}, {-2, Automatic}},
+FrontEndVersion->"11.1 for Mac OS X x86 (32-bit, 64-bit Kernel) (April 27, \
+2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 2134, 55, 224, "Code", "ExpressionUUID" -> \
+"db0e6b75-a242-4226-8a6d-bf7aab2bf853"]
+}
+]
+*)
+

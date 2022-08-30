@@ -1,0 +1,1 @@
+Just open the Schwarzschild.nb example file and evaluate it.

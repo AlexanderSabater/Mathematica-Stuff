@@ -1,0 +1,277 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11564,        269]
+NotebookOptionsPosition[      9970,        226]
+NotebookOutlinePosition[     10324,        242]
+CellTagsIndexPosition[     10281,        239]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Knot Theory Notebook", "Title",
+ CellChangeTimes->{{3.7588542581617727`*^9, 
+  3.758854265609023*^9}},ExpressionUUID->"963d7633-ed81-4bde-8a2e-\
+dcd9ddb145e0"],
+
+Cell[BoxData[
+ RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}]], "Code",
+ CellChangeTimes->{{3.758851704677988*^9, 
+  3.758851735937101*^9}},ExpressionUUID->"92ef46f3-f479-457b-a495-\
+ed2910dbdc82"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+  "KnotTheoryPath", " ", "=", " ", 
+   "\"\</Users/alexanderlouisjsabater/Library/Mathematica/Applications/\
+KnotTheory/\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"AppendTo", "[", 
+   RowBox[{"$Path", ",", " ", "KnotTheoryPath"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Get", "[", "\"\<KnotTheory`\>\"", "]"}]}], "Code",
+ CellChangeTimes->{
+  3.758851498228945*^9, {3.758851639798655*^9, 3.7588516566287317`*^9}, {
+   3.758851690543888*^9, 3.758851697461947*^9}, {3.758851747024652*^9, 
+   3.7588517487746773`*^9}, {3.758851805881344*^9, 3.7588518130002623`*^9}, {
+   3.758851906971113*^9, 3.7588519372349167`*^9}, {3.7588519940993147`*^9, 
+   3.758851995609407*^9}},
+ EmphasizeSyntaxErrors->
+  True,ExpressionUUID->"0c1d8949-6c17-48da-a9ce-4ea01325af6b"],
+
+Cell[BoxData["\<\"Loading KnotTheory` version of September 6, 2014, \
+13:37:37.2841.\\nRead more at http://katlas.org/wiki/KnotTheory.\"\>"], \
+"Print",
+ CellChangeTimes->{{3.758851996712304*^9, 
+  3.758852004259856*^9}},ExpressionUUID->"72a31362-9acf-4c78-af7d-\
+4378c10f77a9"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "DeclarePackage","aldec",
+   "\"Symbol \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"CreateWikiConnection\\\\\\\"\\\"}]\\) in \
+\\!\\(\\*RowBox[{\\\"DeclarePackage\\\", \\\"[\\\", \
+RowBox[{\\\"\\\\\\\"WikiLink`\\\\\\\"\\\", \\\",\\\", RowBox[{\\\"{\\\", \
+RowBox[{\\\"\\\\\\\"CreateWikiConnection\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"WikiGetPageText\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"WikiGetPageTexts\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"WikiSetPageText\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"WikiSetPageTexts\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"WikiUploadFile\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"WikiUserName\\\
+\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"WikiPageMatchQ\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"WikiPageFreeQ\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"WikiStringReplace\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"WikiStringCases\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"WikiAllPages\\\\\\\"\\\"}], \\\"}\\\"}]}], \\\"]\\\"}]\\) has \
+already been declared.\"",2,143,23,24770514828791622577,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.758851503304982*^9, 3.758851503389317*^9}, 
+   3.758851699337206*^9, {3.758851744486391*^9, 3.758851749268523*^9}, 
+   3.75885183433629*^9, {3.758851921012063*^9, 3.75885193753664*^9}, {
+   3.758851996721243*^9, 
+   3.758852004283455*^9}},ExpressionUUID->"c568b770-3488-4ac4-986c-\
+26117a7dded9"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "DeclarePackage","aldec",
+   "\"Symbol \\!\\(\\*RowBox[{\\\"\\\\\\\"WikiGetPageText\\\\\\\"\\\"}]\\) in \
+\\!\\(\\*RowBox[{\\\"DeclarePackage\\\", \\\"[\\\", \
+RowBox[{\\\"\\\\\\\"WikiLink`\\\\\\\"\\\", \\\",\\\", RowBox[{\\\"{\\\", \
+RowBox[{\\\"\\\\\\\"CreateWikiConnection\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"WikiGetPageText\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"WikiGetPageTexts\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"WikiSetPageText\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"WikiSetPageTexts\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"WikiUploadFile\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"WikiUserName\\\
+\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"WikiPageMatchQ\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"WikiPageFreeQ\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"WikiStringReplace\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"WikiStringCases\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"WikiAllPages\\\\\\\"\\\"}], \\\"}\\\"}]}], \\\"]\\\"}]\\) has \
+already been declared.\"",2,143,24,24770514828791622577,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.758851503304982*^9, 3.758851503389317*^9}, 
+   3.758851699337206*^9, {3.758851744486391*^9, 3.758851749268523*^9}, 
+   3.75885183433629*^9, {3.758851921012063*^9, 3.75885193753664*^9}, {
+   3.758851996721243*^9, 
+   3.758852004405142*^9}},ExpressionUUID->"2844da85-94b4-4149-92ea-\
+60b8950f7893"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "DeclarePackage","aldec",
+   "\"Symbol \\!\\(\\*RowBox[{\\\"\\\\\\\"WikiGetPageTexts\\\\\\\"\\\"}]\\) \
+in \\!\\(\\*RowBox[{\\\"DeclarePackage\\\", \\\"[\\\", \
+RowBox[{\\\"\\\\\\\"WikiLink`\\\\\\\"\\\", \\\",\\\", RowBox[{\\\"{\\\", \
+RowBox[{\\\"\\\\\\\"CreateWikiConnection\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"WikiGetPageText\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"WikiGetPageTexts\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"WikiSetPageText\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"WikiSetPageTexts\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"WikiUploadFile\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"WikiUserName\\\
+\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"WikiPageMatchQ\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"WikiPageFreeQ\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"WikiStringReplace\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"WikiStringCases\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"WikiAllPages\\\\\\\"\\\"}], \\\"}\\\"}]}], \\\"]\\\"}]\\) has \
+already been declared.\"",2,143,25,24770514828791622577,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.758851503304982*^9, 3.758851503389317*^9}, 
+   3.758851699337206*^9, {3.758851744486391*^9, 3.758851749268523*^9}, 
+   3.75885183433629*^9, {3.758851921012063*^9, 3.75885193753664*^9}, {
+   3.758851996721243*^9, 
+   3.758852004426331*^9}},ExpressionUUID->"aeb35c09-3a69-4b76-880e-\
+1446166a43ff"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"DeclarePackage\\\", \
+\\\"::\\\", \\\"aldec\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,143,26,24770514828791622577,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.758851503304982*^9, 3.758851503389317*^9}, 
+   3.758851699337206*^9, {3.758851744486391*^9, 3.758851749268523*^9}, 
+   3.75885183433629*^9, {3.758851921012063*^9, 3.75885193753664*^9}, {
+   3.758851996721243*^9, 
+   3.758852004456037*^9}},ExpressionUUID->"41990396-c0d7-45ee-8a0c-\
+6831dbcab30f"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Loading QuantumGroups` version 2.0\\n\"\>", 
+   "\[InvisibleSpace]", "\<\"Read more at \
+http://katlas.math.toronto.edu/wiki/QuantumGroups\"\>"}],
+  SequenceForm[
+  "Loading QuantumGroups` version 2.0\n", 
+   "Read more at http://katlas.math.toronto.edu/wiki/QuantumGroups"],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.758851996712304*^9, 
+  3.758852004476775*^9}},ExpressionUUID->"58f9c652-540b-4d02-8ddd-\
+f88124f0e512"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "qBinomial","shdw",
+   "\"Symbol \\!\\(\\*RowBox[{\\\"\\\\\\\"qBinomial\\\\\\\"\\\"}]\\) appears \
+in multiple contexts \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"\\\\\\\"QuantumGroups`\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"KnotTheory`\\\\\\\"\\\"}], \\\"}\\\"}]\\); definitions in context \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"QuantumGroups`\\\\\\\"\\\"}]\\) may shadow or be \
+shadowed by other definitions.\"",2,143,28,24770514828791622577,"Local",
+   "QuantumGroups`qBinomial"},
+  "MessageTemplate2"]], "Message", "MSG",
+ CellChangeTimes->{{3.758851503304982*^9, 3.758851503389317*^9}, 
+   3.758851699337206*^9, {3.758851744486391*^9, 3.758851749268523*^9}, 
+   3.75885183433629*^9, {3.758851921012063*^9, 3.75885193753664*^9}, {
+   3.758851996721243*^9, 
+   3.758852004481008*^9}},ExpressionUUID->"b5e1f850-f55a-45b8-ad28-\
+d7630f653475"],
+
+Cell[BoxData["\<\"Remember to set QuantumGroupsDataDirectory[] to the \
+appropriate path, if you've downloaded precomputed data.\"\>"], "Print",
+ CellChangeTimes->{{3.758851996712304*^9, 
+  3.7588520045052433`*^9}},ExpressionUUID->"9f7ade36-c72d-4f67-8e7b-\
+b06760747e70"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "SetDelayed","write",
+   "\"Tag \\!\\(\\*RowBox[{\\\"SquareMatrixQ\\\"}]\\) in \
+\\!\\(\\*RowBox[{\\\"SquareMatrixQ\\\", \\\"[\\\", \\\"m_\\\", \\\"]\\\"}]\\) \
+is Protected.\"",2,143,29,24770514828791622577,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.758851503304982*^9, 3.758851503389317*^9}, 
+   3.758851699337206*^9, {3.758851744486391*^9, 3.758851749268523*^9}, 
+   3.75885183433629*^9, {3.758851921012063*^9, 3.75885193753664*^9}, {
+   3.758851996721243*^9, 
+   3.7588520045095673`*^9}},ExpressionUUID->"8b04e778-0377-4434-9613-\
+6a7de0e4aa4c"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "X$","shdw",
+   "\"Symbol \\!\\(\\*RowBox[{\\\"\\\\\\\"X$\\\\\\\"\\\"}]\\) appears in \
+multiple contexts \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{\\\"\\\\\\\"QuantumGroups`Algebra`\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\
+\"KnotTheory`\\\\\\\"\\\"}], \\\"}\\\"}]\\); definitions in context \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"QuantumGroups`Algebra`\\\\\\\"\\\"}]\\) may \
+shadow or be shadowed by other definitions.\"",2,143,30,24770514828791622577,
+   "Local","QuantumGroups`Algebra`X$"},
+  "MessageTemplate2"]], "Message", "MSG",
+ CellChangeTimes->{{3.758851503304982*^9, 3.758851503389317*^9}, 
+   3.758851699337206*^9, {3.758851744486391*^9, 3.758851749268523*^9}, 
+   3.75885183433629*^9, {3.758851921012063*^9, 3.75885193753664*^9}, {
+   3.758851996721243*^9, 
+   3.7588520045291557`*^9}},ExpressionUUID->"5335ad46-7fcf-47ba-9bf4-\
+6f10bfb27f22"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{951, 651},
+WindowMargins->{{-6, Automatic}, {Automatic, 3}},
+FrontEndVersion->"11.1 for Mac OS X x86 (32-bit, 64-bit Kernel) (April 27, \
+2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 165, 3, 92, "Title", "ExpressionUUID" -> \
+"963d7633-ed81-4bde-8a2e-dcd9ddb145e0"],
+Cell[748, 27, 201, 4, 52, "Code", "ExpressionUUID" -> \
+"92ef46f3-f479-457b-a495-ed2910dbdc82"],
+Cell[CellGroupData[{
+Cell[974, 35, 820, 18, 91, "Code", "ExpressionUUID" -> \
+"0c1d8949-6c17-48da-a9ce-4ea01325af6b"],
+Cell[1797, 55, 278, 5, 44, "Print", "ExpressionUUID" -> \
+"72a31362-9acf-4c78-af7d-4378c10f77a9"],
+Cell[2078, 62, 1376, 25, 60, "Message", "ExpressionUUID" -> \
+"c568b770-3488-4ac4-986c-26117a7dded9"],
+Cell[3457, 89, 1369, 24, 59, "Message", "ExpressionUUID" -> \
+"2844da85-94b4-4149-92ea-60b8950f7893"],
+Cell[4829, 115, 1370, 24, 59, "Message", "ExpressionUUID" -> \
+"aeb35c09-3a69-4b76-880e-1446166a43ff"],
+Cell[6202, 141, 626, 12, 24, "Message", "ExpressionUUID" -> \
+"41990396-c0d7-45ee-8a0c-6831dbcab30f"],
+Cell[6831, 155, 480, 11, 44, "Print", "ExpressionUUID" -> \
+"58f9c652-540b-4d02-8ddd-f88124f0e512"],
+Cell[7314, 168, 866, 16, 42, "Message", "ExpressionUUID" -> \
+"b5e1f850-f55a-45b8-ad28-d7630f653475"],
+Cell[8183, 186, 272, 4, 24, "Print", "ExpressionUUID" -> \
+"9f7ade36-c72d-4f67-8e7b-b06760747e70"],
+Cell[8458, 192, 610, 12, 24, "Message", "ExpressionUUID" -> \
+"8b04e778-0377-4434-9613-6a7de0e4aa4c"],
+Cell[9071, 206, 871, 16, 42, "Message", "ExpressionUUID" -> \
+"5335ad46-7fcf-47ba-9bf4-6f10bfb27f22"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

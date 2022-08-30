@@ -1,0 +1,247 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7873,        239]
+NotebookOptionsPosition[      6176,        196]
+NotebookOutlinePosition[      6532,        212]
+CellTagsIndexPosition[      6489,        209]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}]], "Code",
+ CellChangeTimes->{
+  3.741285044928138*^9},ExpressionUUID->"99d6b49d-4066-4602-8872-\
+1b4207063152"],
+
+Cell["The inner product", "Text",
+ CellChangeTimes->{{3.740009647688527*^9, 
+  3.740009651405752*^9}},ExpressionUUID->"09c92229-68cd-4679-946a-\
+c41767cd0e62"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"Discrete", ":", " ", 
+     RowBox[{"\[LeftAngleBracket]", 
+      RowBox[{"a_", "\[VerticalSeparator]", "b_"}], 
+      "\[RightAngleBracket]"}]}], ":=", 
+    RowBox[{
+     RowBox[{"Conjugate", "[", "a", "]"}], ".", "b"}]}], " ", "*)"}], "\n", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"a_", "\[VerticalSeparator]", "b_"}], "\[RightAngleBracket]"}], ":=", 
+    RowBox[{"Integrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Conjugate", "[", "a", "]"}], "*", "b"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", 
+        RowBox[{"-", "Infinity"}], ",", "Infinity"}], "}"}]}], "]"}]}], 
+   ";"}]}]], "Code",
+ CellChangeTimes->{{3.679325173028163*^9, 3.679325194914929*^9}, {
+  3.74000965586304*^9, 
+  3.74000965603036*^9}},ExpressionUUID->"e45b918f-347f-4806-93e5-\
+a9d8d4d04018"],
+
+Cell["Poisson bracket and commutator", "Text",
+ CellChangeTimes->{{3.740009667844967*^9, 
+  3.74000967407012*^9}},ExpressionUUID->"906f6607-783f-4ee2-bf2f-\
+a3a19a4d1232"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"PoissonBracket", "[", 
+    RowBox[{"a_", ",", "b_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"D", "[", 
+      RowBox[{"a", ",", "x"}], "]"}], "*", 
+     RowBox[{"D", "[", 
+      RowBox[{"b", ",", "p"}], "]"}]}], "-", 
+    RowBox[{
+     RowBox[{"D", "[", 
+      RowBox[{"b", ",", "x"}], "]"}], "*", 
+     RowBox[{"D", "[", 
+      RowBox[{"a", ",", "p"}], "]"}]}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Commutator", "[", 
+    RowBox[{"a_", ",", "b_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"a", " ", "b"}], "-", 
+    RowBox[{"b", " ", "a"}]}]}], ";"}]}], "Code",
+ CellChangeTimes->{
+  3.682628970041636*^9, {3.740009675894342*^9, 
+   3.740009692919042*^9}},ExpressionUUID->"881b485c-0804-441f-b827-\
+4b72b43703ce"],
+
+Cell["Expectation value of an operator Q", "Text",
+ CellChangeTimes->{
+  3.740009702705368*^9},ExpressionUUID->"bf3d45d3-0b13-4247-9218-\
+264374bfd089"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[LeftAngleBracket]", "Q", "\[RightAngleBracket]"}], "=", 
+   RowBox[{"\[LeftAngleBracket]", 
+    RowBox[{"a", "\[VerticalSeparator]", 
+     RowBox[{"Q", "[", "a", "]"}]}], "\[RightAngleBracket]"}]}], 
+  ";"}]], "Code",
+ CellChangeTimes->{{3.679333249960505*^9, 3.6793332902123013`*^9}, {
+  3.740009698143911*^9, 
+  3.740009705711122*^9}},ExpressionUUID->"776ff316-84db-47e2-b191-\
+f3aa28abacaa"],
+
+Cell["The momentum operator", "Text",
+ CellChangeTimes->{
+  3.7400097158841143`*^9},ExpressionUUID->"80472d41-4d66-41bd-a54e-\
+ed7099eaf824"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"p", "[", "\[Psi]_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"-", "I"}], "*", "\[HBar]", "*", 
+    RowBox[{"D", "[", 
+     RowBox[{"\[Psi]", ",", "x"}], "]"}]}]}], ";"}]], "Code",
+ CellChangeTimes->{{3.679325280556501*^9, 3.679325301655822*^9}, {
+  3.679332920305286*^9, 3.6793329239221077`*^9}, {3.679332960360341*^9, 
+  3.679332975080759*^9}, {3.740009713186613*^9, 
+  3.740009718671692*^9}},ExpressionUUID->"2b0862b0-2e74-4bed-8f6e-\
+9d02f94d7978"],
+
+Cell["The Hamiltonian", "Text",
+ CellChangeTimes->{
+  3.740009724020001*^9},ExpressionUUID->"5cd3de5e-95e7-46c6-818b-\
+9078b31594a4"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"H", "[", "\[CapitalPsi]_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{"\[HBar]", "^", "2"}]}], "/", 
+      RowBox[{"(", 
+       RowBox[{"2", "*", "m"}], ")"}]}], "*", 
+     RowBox[{"Laplacian", "[", 
+      RowBox[{"\[CapitalPsi]", ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], "]"}]}], "+", 
+    RowBox[{"V", "*", "\[CapitalPsi]"}]}]}], ";"}]], "Code",
+ CellChangeTimes->{{3.679333038824638*^9, 3.679333207553928*^9}, {
+  3.74000972137667*^9, 
+  3.740009726679887*^9}},ExpressionUUID->"2b0faeaa-becd-4baf-8663-\
+bcd304cd5f4f"],
+
+Cell["Time-Independent Schr\[ODoubleDot]dinger Equation ", "Text",
+ CellChangeTimes->{
+  3.740009733378861*^9},ExpressionUUID->"a2deb9ec-42b0-4b1c-81b0-\
+3220ca63a80b"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SE1", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"H", "[", 
+     RowBox[{"\[Psi]", "[", 
+      RowBox[{"x", ",", "y", ",", "z"}], "]"}], "]"}], "-", 
+    RowBox[{"En", "*", 
+     RowBox[{"\[Psi]", "[", 
+      RowBox[{"x", ",", "y", ",", "z"}], "]"}]}]}]}], ";"}]], "Code",
+ CellChangeTimes->{{3.679333524860018*^9, 3.6793336332020407`*^9}, {
+  3.740009730545088*^9, 
+  3.7400097358162403`*^9}},ExpressionUUID->"174d3381-2ae8-404a-8295-\
+e6efb890e0e1"],
+
+Cell["Time-Dependent Schr\[ODoubleDot]dinger Equation", "Text",
+ CellChangeTimes->{
+  3.7400097410832253`*^9},ExpressionUUID->"f5b5b9d4-8efe-46a7-ab26-\
+ac22de0612aa"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SE2", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"H", "[", 
+     RowBox[{"\[CapitalPsi]", "[", 
+      RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "]"}], "-", 
+    RowBox[{"D", "[", 
+     RowBox[{
+      RowBox[{"\[CapitalPsi]", "[", 
+       RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], ",", "t"}], 
+     "]"}]}]}], ";"}]], "Code",
+ CellChangeTimes->{{3.679333626968314*^9, 3.6793336730992317`*^9}, {
+  3.740009738626072*^9, 
+  3.740009743168414*^9}},ExpressionUUID->"1dd217a1-d457-4a06-90ca-\
+0c98ee0ab55f"]
+},
+WindowSize->{808, 652},
+WindowMargins->{{117, Automatic}, {Automatic, 37}},
+FrontEndVersion->"11.1 for Mac OS X x86 (32-bit, 64-bit Kernel) (April 27, \
+2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 177, 4, 52, "Code", "ExpressionUUID" -> \
+"99d6b49d-4066-4602-8872-1b4207063152"],
+Cell[738, 26, 159, 3, 30, "Text", "ExpressionUUID" -> \
+"09c92229-68cd-4679-946a-c41767cd0e62"],
+Cell[900, 31, 892, 25, 73, "Code", "ExpressionUUID" -> \
+"e45b918f-347f-4806-93e5-a9d8d4d04018"],
+Cell[1795, 58, 171, 3, 30, "Text", "ExpressionUUID" -> \
+"906f6607-783f-4ee2-bf2f-a3a19a4d1232"],
+Cell[1969, 63, 787, 26, 72, "Code", "ExpressionUUID" -> \
+"881b485c-0804-441f-b827-4b72b43703ce"],
+Cell[2759, 91, 152, 3, 30, "Text", "ExpressionUUID" -> \
+"bf3d45d3-0b13-4247-9218-264374bfd089"],
+Cell[2914, 96, 443, 11, 53, "Code", "ExpressionUUID" -> \
+"776ff316-84db-47e2-b191-f3aa28abacaa"],
+Cell[3360, 109, 141, 3, 30, "Text", "ExpressionUUID" -> \
+"80472d41-4d66-41bd-a54e-ed7099eaf824"],
+Cell[3504, 114, 495, 12, 52, "Code", "ExpressionUUID" -> \
+"2b0862b0-2e74-4bed-8f6e-9d02f94d7978"],
+Cell[4002, 128, 133, 3, 30, "Text", "ExpressionUUID" -> \
+"5cd3de5e-95e7-46c6-818b-9078b31594a4"],
+Cell[4138, 133, 651, 19, 52, "Code", "ExpressionUUID" -> \
+"2b0faeaa-becd-4baf-8663-bcd304cd5f4f"],
+Cell[4792, 154, 168, 3, 30, "Text", "ExpressionUUID" -> \
+"a2deb9ec-42b0-4b1c-81b0-3220ca63a80b"],
+Cell[4963, 159, 483, 13, 52, "Code", "ExpressionUUID" -> \
+"174d3381-2ae8-404a-8295-e6efb890e0e1"],
+Cell[5449, 174, 167, 3, 30, "Text", "ExpressionUUID" -> \
+"f5b5b9d4-8efe-46a7-ab26-ac22de0612aa"],
+Cell[5619, 179, 553, 15, 52, "Code", "ExpressionUUID" -> \
+"1dd217a1-d457-4a06-90ca-0c98ee0ab55f"]
+}
+]
+*)
+
